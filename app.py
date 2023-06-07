@@ -1,14 +1,14 @@
 import json
+import os
 from typing import Dict, List, Union
 
+import google.generativeai as palm
 import numpy as np
 import openai
-import os
 import pandas as pd
 import streamlit as st
-import google.generativeai as palm
+from PyPDF2 import PdfReader
 from scipy.spatial.distance import cosine
-
 from sentence_transformers import SentenceTransformer
 from streamlit_chat import message
 
@@ -17,6 +17,7 @@ st.set_page_config(page_title="WYN AI", page_icon=":robot_face:")
 st.markdown(
     f"""
         <h1 style='text-align: center;'>W.Y.N. Artificial Intelligence😬</h1>
+        <h4 style='text-align: left;'>Yiqiao Yin</h4>
     """,
     unsafe_allow_html=True,
 )
@@ -39,9 +40,7 @@ if "domain_name" not in st.session_state:
 
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
 st.sidebar.title("Sidebar")
-model_name = st.sidebar.radio(
-    "Choose a model:", ("ChatGPT", "Palm", "Next...")
-)
+model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
     "Choose a domain:", ("General", "Labcorp 2022 Annual Report", "Upload Your Own")
 )
@@ -60,11 +59,14 @@ if clear_button:
     st.session_state["domain_name"] = []
     counter_placeholder.write(f"Next item ...")
 
-from dotenv import load_dotenv, find_dotenv
-_ = load_dotenv(find_dotenv()) # read local .env file
+from dotenv import find_dotenv, load_dotenv
+
+_ = load_dotenv(find_dotenv())  # read local .env file
 
 # openai.api_key = os.environ['OPENAI_API_KEY']
 openai.api_key = st.secrets["OPENAI_API_KEY"]
+
+
 def call_chatgpt(prompt: str) -> str:
     """
     Uses the OpenAI API to generate an AI response to a prompt.
@@ -99,6 +101,7 @@ def call_chatgpt(prompt: str) -> str:
 palm_api_key = st.secrets["PALM_API_KEY"]
 palm.configure(api_key=palm_api_key)
 
+
 def call_palm(prompt: str) -> str:
     completion = palm.generate_text(
         model="models/text-bison-001",
@@ -108,6 +111,7 @@ def call_palm(prompt: str) -> str:
     )
 
     return completion.result
+
 
 def calculate_cosine_similarity(sentence1: str, sentence2: str) -> float:
     """
@@ -263,9 +267,6 @@ def convert_to_list_of_dict(df: pd.DataFrame) -> List[Dict[str, str]]:
 
     # Return the list of dictionaries
     return result
-
-
-from PyPDF2 import PdfReader
 
 
 def extract_data(feed):
