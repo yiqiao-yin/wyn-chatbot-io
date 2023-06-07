@@ -1,0 +1,11 @@
+google-ai-generativelanguage      == 0.2.0
+langchain                         == 0.0.79
+openai                            == 0.27.7
+numpy                             == 1.24.3
+streamlit                         == 1.23.1
+streamlit-chat                    == 0.0.2.2
+scikit-learn                      == 1.2.2
+scipy                             == 1.10.1
+sentence-transformers             == 2.2.2
+setuptools                        == 65.6.3
+transformers                      == 4.29.2
