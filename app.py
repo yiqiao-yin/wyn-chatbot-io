@@ -7,17 +7,20 @@ import numpy as np
 import openai
 import pandas as pd
 import streamlit as st
+from dotenv import find_dotenv, load_dotenv
 from PyPDF2 import PdfReader
 from scipy.spatial.distance import cosine
 from sentence_transformers import SentenceTransformer
 from streamlit_chat import message
+
+_ = load_dotenv(find_dotenv())  # read local .env file
 
 # Setting page title and header
 st.set_page_config(page_title="WYN AI", page_icon=":robot_face:")
 st.markdown(
     f"""
         <h1 style='text-align: center;'>W.Y.N. Artificial Intelligence😬</h1>
-        <h4 style='text-align: left;'>Yiqiao Yin</h4>
+        <h4 style='text-align: center;'>Author: Yiqiao Yin</h4>
     """,
     unsafe_allow_html=True,
 )
@@ -59,9 +62,6 @@ if clear_button:
     st.session_state["domain_name"] = []
     counter_placeholder.write(f"Next item ...")
 
-from dotenv import find_dotenv, load_dotenv
-
-_ = load_dotenv(find_dotenv())  # read local .env file
 
 # openai.api_key = os.environ['OPENAI_API_KEY']
 openai.api_key = st.secrets["OPENAI_API_KEY"]
@@ -299,7 +299,7 @@ container = st.container()
 
 with container:
     with st.form(key="my_form", clear_on_submit=True):
-        user_input = st.text_area("You:", key="input", height=100)
+        user_input = st.text_area("Enter your question here:", key="input", height=100)
         submit_button = st.form_submit_button(label="Send")
 
     if submit_button and user_input:
