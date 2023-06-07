@@ -63,7 +63,8 @@ if clear_button:
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv()) # read local .env file
 
-openai.api_key  = os.environ['OPENAI_API_KEY']
+# openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 def call_chatgpt(prompt: str) -> str:
     """
     Uses the OpenAI API to generate an AI response to a prompt.
@@ -94,7 +95,8 @@ def call_chatgpt(prompt: str) -> str:
     return ans
 
 
-palm_api_key  = os.environ['PALM_API_KEY']
+# palm_api_key = os.environ['PALM_API_KEY']
+palm_api_key = st.secrets["PALM_API_KEY"]
 palm.configure(api_key=palm_api_key)
 
 def call_palm(prompt: str) -> str:
