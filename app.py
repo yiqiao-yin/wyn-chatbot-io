@@ -43,6 +43,7 @@ if "domain_name" not in st.session_state:
 
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
 st.sidebar.title("Sidebar")
+similarity_indicator = st.sidebar.radio("Choose a similarity algorithm:", ("Cosine", "Levenshtein", "STS", "Next..."))
 model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
     "Choose a domain:", ("General", "Labcorp 2022 Annual Report", "Upload Your Own")
@@ -317,7 +318,7 @@ with container:
                 output = call_chatgpt(processed_user_question)
 
         elif domain_name == "Labcorp 2022 Annual Report":
-            df_screened_by_dist_score = add_dist_score_column(df, user_input, "cosine")
+            df_screened_by_dist_score = add_dist_score_column(df, user_input, similarity_indicator.lower())
             qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
 
             processed_user_question = f"""
