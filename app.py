@@ -50,6 +50,7 @@ domain_name = st.sidebar.radio(
 counter_placeholder = st.sidebar.empty()
 counter_placeholder.write(f"Next item ... ")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
+st.sidebar.markdown("@ Yiqiao Yin | [Site](https://www.y-yin.io/) | [LinkedIn](https://www.linkedin.com/in/yiqiaoyin/) | [YouTube](https://youtube.com/YiqiaoYin/)")
 
 # reset everything
 if clear_button:
