@@ -43,15 +43,20 @@ if "domain_name" not in st.session_state:
 
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
 st.sidebar.title("Sidebar")
-similarity_indicator = st.sidebar.radio("Choose a similarity algorithm:", ("Cosine", "Levenshtein", "STS", "Next..."))
+similarity_indicator = st.sidebar.radio(
+    "Choose a similarity algorithm:", ("Cosine", "Levenshtein", "STS", "Next...")
+)
 model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
-    "Choose a domain:", ("General", "Labcorp 2022 Annual Report", "Upload Your Own")
+    "Choose a domain:",
+    ("General", "Labcorp 2022 Annual Report", "CBT", "Upload Your Own"),
 )
 counter_placeholder = st.sidebar.empty()
 counter_placeholder.write(f"Next item ... ")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
-st.sidebar.markdown("@ Yiqiao Yin | [Site](https://www.y-yin.io/) | [LinkedIn](https://www.linkedin.com/in/yiqiaoyin/) | [YouTube](https://youtube.com/YiqiaoYin/)")
+st.sidebar.markdown(
+    "@ Yiqiao Yin | [Site](https://www.y-yin.io/) | [LinkedIn](https://www.linkedin.com/in/yiqiaoyin/) | [YouTube](https://youtube.com/YiqiaoYin/)"
+)
 
 # reset everything
 if clear_button:
@@ -316,15 +321,29 @@ with container:
                 output = call_palm(processed_user_question)
             else:
                 output = call_chatgpt(processed_user_question)
-
         elif domain_name == "Labcorp 2022 Annual Report":
-            df_screened_by_dist_score = add_dist_score_column(df, user_input, similarity_indicator.lower())
+            df_screened_by_dist_score = add_dist_score_column(
+                df, user_input, similarity_indicator.lower()
+            )
             qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
 
             processed_user_question = f"""
                 Learn from the context: {qa_pairs}
                 Answer the following question as if you are the AI assistant: {user_input}
                 Produce a text answer that are complete sentences.
+            """
+            if model_name == "ChatGPT":
+                output = call_chatgpt(processed_user_question)
+            elif model_name == "Palm":
+                output = call_palm(processed_user_question)
+            else:
+                output = call_chatgpt(processed_user_question)
+        elif domain_name == "CBT":
+            processed_user_question = f"""
+                You are therapist for the user. You specialize in Cognitive Behavioral Therapy.
+                Answer the following question from the user: {user_input}
+                Make sure to be aware of suicidal symptoms, depression, anxiety disorders.
+                Be patient with the user and try to comfort them.
             """
             if model_name == "ChatGPT":
                 output = call_chatgpt(processed_user_question)
