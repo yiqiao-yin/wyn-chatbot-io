@@ -6,6 +6,7 @@ import google.generativeai as palm
 import numpy as np
 import openai
 import pandas as pd
+import requests
 import streamlit as st
 from dotenv import find_dotenv, load_dotenv
 from PyPDF2 import PdfReader
@@ -46,7 +47,7 @@ st.sidebar.title("Sidebar")
 similarity_indicator = st.sidebar.radio(
     "Choose a similarity algorithm:", ("Cosine", "Levenshtein", "STS", "Next...")
 )
-model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Palm", "Next..."))
+model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
     "Choose a domain:",
     ("General", "Labcorp 2022 Annual Report", "CBT", "Upload Your Own"),
@@ -102,6 +103,15 @@ def call_chatgpt(prompt: str) -> str:
 
     # Return the generated AI response.
     return ans
+
+
+def call_yin_test1(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        # Handle any potential errors
+        return None
 
 
 # palm_api_key = os.environ['PALM_API_KEY']
@@ -319,6 +329,11 @@ with container:
                 output = call_chatgpt(processed_user_question)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
+            elif model_name == "Yin":
+                query = processed_user_question
+                key = "123"
+                api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={key}"
+                output = call_yin_test1(api_url)['answer']
             else:
                 output = call_chatgpt(processed_user_question)
         elif domain_name == "Labcorp 2022 Annual Report":
