@@ -310,7 +310,7 @@ if domain_name == "Upload Your Own":
 
 if model_name == "Yin":
     st.write("### Enter your key to access model Yin")
-    key = st.text_area("Enter your key here:", key="input", height=100)
+    user_key = st.text_area("Enter your key here:", key="input", height=100)
 
 
 # container for chat history
@@ -335,8 +335,8 @@ with container:
                 output = call_palm(processed_user_question)
             elif model_name == "Yin":
                 query = processed_user_question
-                # key = "123"
-                api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={key}"
+                # user_key = "123"
+                api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
                 output = call_yin_test1(api_url)['answer']
             else:
                 output = call_chatgpt(processed_user_question)
