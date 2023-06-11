@@ -335,7 +335,7 @@ with container:
         user_input = st.text_area("Enter your question here:", key="input", height=100)
         if model_name == "Yin":
             # user_key = st.text_input("Enter your model Yin API key here:", key="input_user_key", height=50)
-            user_key = st.text_input('Model Yin API Key', type='password', key='input_user_key', on_change=on_api_key_change, label_visibility="collapsed")
+            user_key = st.text_input('Model Yin API Key', type='password', key='input_user_key')
         submit_button = st.form_submit_button(label="Send")
 
     if submit_button and user_input:
