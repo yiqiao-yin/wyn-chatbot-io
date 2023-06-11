@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="B0SF6t-8myypCtU-7HLx">
-        <mxGraphModel dx="1288" dy="958" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="608" dy="958" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -33,11 +33,10 @@
                 <mxCell id="blLWAzjxGkhtaXdpe22a-15" value="Response" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=3;" parent="1" vertex="1">
                     <mxGeometry x="567" y="294" width="89" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="blLWAzjxGkhtaXdpe22a-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="blLWAzjxGkhtaXdpe22a-18" target="blLWAzjxGkhtaXdpe22a-3" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="blLWAzjxGkhtaXdpe22a-18" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://static.vecteezy.com/system/resources/previews/021/495/996/original/chatgpt-openai-logo-icon-free-png.png;" parent="1" vertex="1">
-                    <mxGeometry x="418.71" y="50" width="62.58" height="71.18" as="geometry"/>
+                <mxCell id="blLWAzjxGkhtaXdpe22a-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="2" target="blLWAzjxGkhtaXdpe22a-3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="418.71000000000004" y="85.59999999999991" as="sourcePoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="blLWAzjxGkhtaXdpe22a-20" value="OpenAI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="481.29" y="70.59" width="60" height="30" as="geometry"/>
@@ -50,6 +49,9 @@
                 </mxCell>
                 <mxCell id="blLWAzjxGkhtaXdpe22a-23" value="API Gateway" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="284.12" y="348" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.machine_learning;fillColor=#2E73B8;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="417.75" y="53.59" width="64.5" height="64" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
