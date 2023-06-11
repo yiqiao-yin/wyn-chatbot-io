@@ -2,12 +2,14 @@
 
 WYN-Chat-IO is a repository that uses the Streamlit package to build a chatbot. The streamlit package helps in designing the frontend, whereas the streamlit_chat package is used to design the chat history of the bot. The main objective of this project is to create an interactive chatbot that can communicate with users and provide them assistance with various tasks.
 
+Link of the app: [link](https://wyn-chatbot-io.streamlit.app/)
+
 ## Requirements
 
 To run the WYN-Chat-IO repository, you need to have Python 3.7 or later installed on your system. You also need to install the following packages:
 
-- streamlit
-- streamlit_chat
+- `streamlit`
+- `streamlit_chat`
 
 You can install these packages using pip by running the following command:
 

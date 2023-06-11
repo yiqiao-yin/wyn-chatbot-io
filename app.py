@@ -316,6 +316,7 @@ container = st.container()
 
 with container:
     with st.form(key="my_form", clear_on_submit=True):
+        key = st.text_area("Enter your key here:", key="input", height=100)
         user_input = st.text_area("Enter your question here:", key="input", height=100)
         submit_button = st.form_submit_button(label="Send")
 
@@ -332,7 +333,6 @@ with container:
             elif model_name == "Yin":
                 query = processed_user_question
                 # key = "123"
-                key = st.text_area("Enter your key here:", key="input", height=100)
                 api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={key}"
                 output = call_yin_test1(api_url)['answer']
             else:
