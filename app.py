@@ -308,10 +308,6 @@ if domain_name == "Upload Your Own":
         pdf_content = extract_data(uploaded_file)
         st.success("Page extraction completed.")
 
-if model_name == "Yin":
-    st.write("### Enter your key to access model Yin")
-    user_key = st.text_area("Enter your key here:", key="input", height=100)
-
 
 # container for chat history
 response_container = st.container()
@@ -321,6 +317,8 @@ container = st.container()
 with container:
     with st.form(key="my_form", clear_on_submit=True):
         user_input = st.text_area("Enter your question here:", key="input", height=100)
+        if model_name == "Yin":
+            user_key = st.text_area("Enter your key here:", key="input", height=100)
         submit_button = st.form_submit_button(label="Send")
 
     if submit_button and user_input:
