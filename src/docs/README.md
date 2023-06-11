@@ -1,6 +1,6 @@
 # SYSTEM
 
-![main](https://github.com/yiqiao-yin/wyn-chatbot-io/blob/main/src/docs/SYSTEM-ARCHITECT-WHITE-BACKGROUND.png)
+![main](./SYSTEM-ARCHITECT-WHITE-BACKGROUND.png)
 
 🚀 Excited to share this pet project! 🎥📚
 
