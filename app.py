@@ -318,6 +318,7 @@ with container:
         user_input = st.text_area("Enter your question here:", key="input", height=100)
         if model_name == "Yin":
             user_key = st.text_input('Model Yin API Key', type='password', key='input_user_key')
+            st.warning('Model Yin is a general chatbot currently and does not feed into other domains.', icon="⚠️")
         submit_button = st.form_submit_button(label="Send")
 
     if submit_button and user_input:
@@ -351,10 +352,6 @@ with container:
                 output = call_chatgpt(processed_user_question)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
-            elif model_name == "Yin":
-                query = processed_user_question
-                api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
-                output = call_yin_test1(api_url)['answer']
             else:
                 output = call_chatgpt(processed_user_question)
         elif domain_name == "CBT":
@@ -368,10 +365,6 @@ with container:
                 output = call_chatgpt(processed_user_question)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
-            elif model_name == "Yin":
-                query = processed_user_question
-                api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
-                output = call_yin_test1(api_url)['answer']
             else:
                 output = call_chatgpt(processed_user_question)
         elif domain_name == "Upload Your Own":
@@ -384,10 +377,6 @@ with container:
                 output = call_chatgpt(processed_user_question)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
-            elif model_name == "Yin":
-                query = processed_user_question
-                api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
-                output = call_yin_test1(api_url)['answer']
             else:
                 output = call_chatgpt(processed_user_question)
 
