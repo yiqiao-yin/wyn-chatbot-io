@@ -331,7 +331,8 @@ with container:
                 output = call_palm(processed_user_question)
             elif model_name == "Yin":
                 query = processed_user_question
-                key = "123"
+                # key = "123"
+                key = st.text_area("Enter your key here:", key="input", height=100)
                 api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={key}"
                 output = call_yin_test1(api_url)['answer']
             else:

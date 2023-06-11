@@ -1,8 +1,10 @@
 import json
 import os
+
 import openai
 
-openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = os.environ["OPENAI_API_KEY"]
+
 
 def call_chatgpt(prompt: str) -> str:
     """
@@ -33,26 +35,24 @@ def call_chatgpt(prompt: str) -> str:
     # Return the generated AI response.
     return ans
 
+
 def lambda_handler(event, context):
     # Grab Data
-    question = event['queryStringParameters']["query"]
-    user_key = event['queryStringParameters']["key"]
+    question = event["queryStringParameters"]["query"]
+    user_key = event["queryStringParameters"]["key"]
 
     if user_key == "123":
         answer = call_chatgpt(question)
     else:
         answer = "Please enter the correct key!"
 
-    processed_resp = {
-        "question": question,
-        "answer": answer
-    }
-    
+    processed_resp = {"question": question, "answer": answer}
+
     # Create return body
     http_resp = {}
-    http_resp['statusCode'] = 200
-    http_resp['headers'] = {}
-    http_resp['headers']['Content-Type'] = 'application/json'
-    http_resp['body'] = json.dumps(processed_resp)
+    http_resp["statusCode"] = 200
+    http_resp["headers"] = {}
+    http_resp["headers"]["Content-Type"] = "application/json"
+    http_resp["body"] = json.dumps(processed_resp)
 
     return http_resp
