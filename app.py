@@ -21,7 +21,6 @@ st.set_page_config(page_title="WYN AI", page_icon=":robot_face:")
 st.markdown(
     f"""
         <h1 style='text-align: center;'>W.Y.N. Artificial Intelligence😬</h1>
-        <h4 style='text-align: center;'>Author: Yiqiao Yin</h4>
     """,
     unsafe_allow_html=True,
 )
@@ -56,7 +55,7 @@ counter_placeholder = st.sidebar.empty()
 counter_placeholder.write(f"Next item ... ")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
 st.sidebar.markdown(
-    "@ Yiqiao Yin | [Site](https://www.y-yin.io/) | [LinkedIn](https://www.linkedin.com/in/yiqiaoyin/) | [YouTube](https://youtube.com/YiqiaoYin/)"
+    "@ [Yiqiao Yin](https://www.y-yin.io/) | [LinkedIn](https://www.linkedin.com/in/yiqiaoyin/) | [YouTube](https://youtube.com/YiqiaoYin/)"
 )
 
 # reset everything
