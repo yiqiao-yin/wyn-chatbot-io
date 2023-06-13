@@ -239,8 +239,8 @@ def add_dist_score_column(
         dataframe["sts"] = dataframe["questions"].apply(
             lambda x: calculate_sts_score(x, sentence)
         )
-    elif similarity_indicator == "sts-openai":
-        dataframe["sts"] = dataframe["questions"].apply(
+    elif similarity_indicator == "stsopenai":
+        dataframe["stsopenai"] = dataframe["questions"].apply(
             lambda x: calculate_sts_openai_score(x, sentence)
         )
     else:
@@ -335,7 +335,7 @@ with container:
                 output = call_chatgpt(processed_user_question)
         elif domain_name == "Labcorp 2022 Annual Report":
             df_screened_by_dist_score = add_dist_score_column(
-                df, user_input, similarity_indicator.lower()
+                df, user_input, similarity_indicator.lower().replace("-", "")
             )
             qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
 
