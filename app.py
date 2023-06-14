@@ -245,7 +245,7 @@ def add_dist_score_column(
         )
     elif similarity_indicator == "stsopenai":
         dataframe["stsopenai"] = dataframe["questions"].apply(
-            lambda x: calculate_sts_openai_score(x, sentence)
+            lambda x: calculate_sts_openai_score(str(x), sentence)
         )
     else:
         dataframe["cosine"] = dataframe["questions"].apply(
