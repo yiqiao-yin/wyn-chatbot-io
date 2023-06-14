@@ -218,6 +218,10 @@ def calculate_sts_openai_score(sentence1: str, sentence2: str) -> float:
     embedding1 = openai_text_embedding(sentence1) # Flatten the embedding array
     embedding2 = openai_text_embedding(sentence2)  # Flatten the embedding array
 
+    # Convert to array
+    embedding1 = np.asarray(embedding1)
+    embedding2 = np.asarray(embedding2)
+
     # Calculate cosine similarity between the embeddings
     similarity_score = 1 - cosine(embedding1, embedding2)
 
