@@ -381,8 +381,8 @@ with container:
                 output = call_chatgpt(processed_user_question)
 
         # update session
-        st.session_state["past"].append(user_input)
-        st.session_state["generated"].append(output)
+        st.session_state["past"].append(st.markdown(user_input))
+        st.session_state["generated"].append(st.markdown(output))
 
 if st.session_state["generated"]:
     with response_container:
