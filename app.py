@@ -389,5 +389,6 @@ if st.session_state["generated"]:
         for i in range(len(st.session_state["generated"])):
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
             # message(st.session_state["generated"][i], key=str(i))
-            message(st.markdown(st.session_state["generated"][i]), key=str(i))
+            # message(st.markdown(st.session_state["generated"][i]), key=str(i))
+            st.markdown(st.session_state["generated"][i], unsafe_allow_html=True)
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
