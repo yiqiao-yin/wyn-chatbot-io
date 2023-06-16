@@ -391,7 +391,7 @@ if st.session_state["generated"]:
             # message(st.session_state["generated"][i], key=str(i))
             # message(st.markdown(st.session_state["generated"][i]), key=str(i))
             message(
-                st.session_state['generated'][i]['data'], 
+                st.session_state['generated'][i],
                 key=f"{i}", 
                 allow_html=True,
                 is_table=True if st.session_state['generated'][i]['type']=='table' else False
