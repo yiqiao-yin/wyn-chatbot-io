@@ -395,8 +395,8 @@ if st.session_state["generated"]:
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
             # message(st.session_state["generated"][i], key=str(i))
             # message(st.markdown(st.session_state["generated"][i]), key=str(i))
-            st.code(
-                st.session_state['generated'][i]['data']
+            message(
+                st.code(st.session_state['generated'][i]['data'])
                 # key=f"{i}"
             )
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
