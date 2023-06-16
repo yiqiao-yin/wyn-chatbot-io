@@ -393,11 +393,4 @@ if st.session_state["generated"]:
     with response_container:
         for i in range(len(st.session_state["generated"])):
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
-            # message(st.session_state["generated"][i], key=str(i))
-            # message(st.markdown(st.session_state["generated"][i]), key=str(i))
-            # message(
-            #     st.session_state['generated'][i]['data'],
-            #     key=f"{i}"
-            # )
-            st.components.v1.html(st.session_state['generated'][i]['data'])
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
