@@ -403,7 +403,7 @@ if st.session_state["generated"]:
             # message(st.markdown(st.session_state["generated"][i]), key=str(i))
             answer = st.session_state["generated"][i]["data"]
             message(
-                f"👇 Token size: {token_size(answer)}, estimated cost: {token_size(answer)*0.002/1000}",
+                f"👇 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*0.002/1000}",
                 key=f"{i}",
             )
             st.code(answer)
