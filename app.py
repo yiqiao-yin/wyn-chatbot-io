@@ -382,7 +382,12 @@ with container:
 
         # update session
         st.session_state["past"].append(user_input)
-        st.session_state["generated"].append(f'{output}')
+        st.session_state["generated"].append(
+            {
+                'type': 'normal',
+                'data': f'{output}'
+            }
+        )
 
 if st.session_state["generated"]:
     with response_container:
@@ -390,8 +395,9 @@ if st.session_state["generated"]:
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
             # message(st.session_state["generated"][i], key=str(i))
             # message(st.markdown(st.session_state["generated"][i]), key=str(i))
+            s
             message(
-                st.session_state['generated'][i],
+                st.session_state['generated'][i]['data'],
                 key=f"{i}", 
                 allow_html=True,
                 is_table=True
