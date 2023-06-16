@@ -44,7 +44,8 @@ if "domain_name" not in st.session_state:
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
 st.sidebar.title("Sidebar")
 similarity_indicator = st.sidebar.radio(
-    "Choose a similarity algorithm:", ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "Next...")
+    "Choose a similarity algorithm:",
+    ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "Next..."),
 )
 model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
@@ -208,14 +209,14 @@ def calculate_sts_score(sentence1: str, sentence2: str) -> float:
 
 
 def openai_text_embedding(prompt: str) -> str:
-    return openai.Embedding.create(
-        input=prompt, model="text-embedding-ada-002"
-    )["data"][0]["embedding"]
+    return openai.Embedding.create(input=prompt, model="text-embedding-ada-002")[
+        "data"
+    ][0]["embedding"]
 
 
 def calculate_sts_openai_score(sentence1: str, sentence2: str) -> float:
     # Compute sentence embeddings
-    embedding1 = openai_text_embedding(sentence1) # Flatten the embedding array
+    embedding1 = openai_text_embedding(sentence1)  # Flatten the embedding array
     embedding2 = openai_text_embedding(sentence2)  # Flatten the embedding array
 
     # Convert to array
@@ -299,8 +300,8 @@ def extract_data(feed):
 
 
 def token_size(string):
-  tokens = string.split()
-  return float(len(tokens))
+    tokens = string.split()
+    return float(len(tokens))
 
 
 if domain_name == "Upload Your Own":
@@ -322,8 +323,13 @@ with container:
     with st.form(key="my_form", clear_on_submit=True):
         user_input = st.text_area("Enter your question here:", key="input", height=100)
         if model_name == "Yin":
-            user_key = st.text_input('Model Yin API Key', type='password', key='input_user_key')
-            st.warning('Model Yin is a general chatbot currently and does not feed into other domains.', icon="⚠️")
+            user_key = st.text_input(
+                "Model Yin API Key", type="password", key="input_user_key"
+            )
+            st.warning(
+                "Model Yin is a general chatbot currently and does not feed into other domains.",
+                icon="⚠️",
+            )
         submit_button = st.form_submit_button(label="Send")
 
     if submit_button and user_input:
@@ -339,7 +345,7 @@ with container:
             elif model_name == "Yin":
                 query = processed_user_question
                 api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
-                output = call_yin_test1(api_url)['answer']
+                output = call_yin_test1(api_url)["answer"]
             else:
                 output = call_chatgpt(processed_user_question)
         elif domain_name == "Labcorp 2022 Annual Report":
@@ -387,12 +393,7 @@ with container:
 
         # update session
         st.session_state["past"].append(user_input)
-        st.session_state["generated"].append(
-            {
-                'type': 'normal',
-                'data': f'{output}'
-            }
-        )
+        st.session_state["generated"].append({"type": "normal", "data": f"{output}"})
 
 if st.session_state["generated"]:
     with response_container:
@@ -400,7 +401,10 @@ if st.session_state["generated"]:
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
             # message(st.session_state["generated"][i], key=str(i))
             # message(st.markdown(st.session_state["generated"][i]), key=str(i))
-            answer = st.session_state['generated'][i]['data']
-            message(f"👇 Token size: {token_size(answer)}", key=f"{i}")
+            answer = st.session_state["generated"][i]["data"]
+            message(
+                f"👇 Token size: {token_size(answer)}, estimated cost: {token_size(answer)*0.002/1000}",
+                key=f"{i}",
+            )
             st.code(answer)
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
