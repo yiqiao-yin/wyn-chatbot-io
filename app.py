@@ -397,8 +397,6 @@ if st.session_state["generated"]:
             # message(st.markdown(st.session_state["generated"][i]), key=str(i))
             message(
                 st.session_state['generated'][i]['data'],
-                key=f"{i}", 
-                allow_html=True,
-                is_table=True
+                key=f"{i}"
             )
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
