@@ -45,7 +45,7 @@ if "domain_name" not in st.session_state:
 st.sidebar.title("Sidebar")
 similarity_indicator = st.sidebar.radio(
     "Choose a similarity algorithm:",
-    ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "STS-Palm" "Next..."),
+    ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "STS-Palm", "Next..."),
 )
 model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
