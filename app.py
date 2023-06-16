@@ -382,7 +382,7 @@ with container:
 
         # update session
         st.session_state["past"].append(user_input)
-        st.session_state["generated"].append(output)
+        st.session_state["generated"].append(f'{output}')
 
 if st.session_state["generated"]:
     with response_container:
@@ -390,6 +390,10 @@ if st.session_state["generated"]:
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
             # message(st.session_state["generated"][i], key=str(i))
             # message(st.markdown(st.session_state["generated"][i]), key=str(i))
-            message("", key=str(i))
-            st.markdown(st.session_state.generated[i])
+            message(
+                st.session_state['generated'][i]['data'], 
+                key=f"{i}", 
+                allow_html=True,
+                is_table=True if st.session_state['generated'][i]['type']=='table' else False
+            )
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
