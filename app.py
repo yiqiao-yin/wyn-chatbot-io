@@ -394,6 +394,6 @@ if st.session_state["generated"]:
                 st.session_state['generated'][i],
                 key=f"{i}", 
                 allow_html=True,
-                is_table=True if st.session_state['generated'][i]['type']=='table' else False
+                is_table=True
             )
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
