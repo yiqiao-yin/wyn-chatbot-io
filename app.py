@@ -415,7 +415,7 @@ if st.session_state["generated"]:
         for i in range(len(st.session_state["generated"])):
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
             answer = st.session_state["generated"][i]["data"]
-            if domain_name.lower() == "coder":
+            if domain_name.lower() != "coder":
                 message(
                     f"""
                         👇 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*0.002/1000} \n {answer}
