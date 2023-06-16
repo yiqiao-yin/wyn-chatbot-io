@@ -348,6 +348,21 @@ with container:
                 output = call_yin_test1(api_url)["answer"]
             else:
                 output = call_chatgpt(processed_user_question)
+        elif domain_name == "Coder":
+            processed_user_question = f"""
+                You are an AI assistant for the user.
+                Answer the following question from the user: {user_input}
+            """
+            if model_name == "ChatGPT":
+                output = call_chatgpt(processed_user_question)
+            elif model_name == "Palm":
+                output = call_palm(processed_user_question)
+            elif model_name == "Yin":
+                query = processed_user_question
+                api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
+                output = call_yin_test1(api_url)["answer"]
+            else:
+                output = call_chatgpt(processed_user_question)
         elif domain_name == "Labcorp 2022 Annual Report":
             df_screened_by_dist_score = add_dist_score_column(
                 df, user_input, similarity_indicator.lower().replace("-", "")
