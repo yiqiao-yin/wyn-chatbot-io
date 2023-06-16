@@ -298,6 +298,11 @@ def extract_data(feed):
     return text
 
 
+def token_size(string):
+  tokens = string.split()
+  return float(len(tokens))
+
+
 if domain_name == "Upload Your Own":
     st.write("### Upload or select your PDF file")
     uploaded_file = st.file_uploader("Choose your .pdf file", type="pdf")
@@ -395,6 +400,7 @@ if st.session_state["generated"]:
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
             # message(st.session_state["generated"][i], key=str(i))
             # message(st.markdown(st.session_state["generated"][i]), key=str(i))
-            message("👇", key=f"{i}")
-            st.code(st.session_state['generated'][i]['data'])
+            answer = st.session_state['generated'][i]['data']
+            message(f"👇 Token size: {token_size(answer)}", key=f"{i}")
+            st.code(answer)
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
