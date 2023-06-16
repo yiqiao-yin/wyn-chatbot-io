@@ -50,7 +50,7 @@ similarity_indicator = st.sidebar.radio(
 model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
     "Choose a domain:",
-    ("General", "Labcorp 2022 Annual Report", "CBT", "Upload Your Own"),
+    ("General", "Coder", "Labcorp 2022 Annual Report", "CBT", "Upload Your Own"),
 )
 counter_placeholder = st.sidebar.empty()
 counter_placeholder.write(f"Next item ... ")
@@ -399,12 +399,17 @@ if st.session_state["generated"]:
     with response_container:
         for i in range(len(st.session_state["generated"])):
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
-            # message(st.session_state["generated"][i], key=str(i))
-            # message(st.markdown(st.session_state["generated"][i]), key=str(i))
             answer = st.session_state["generated"][i]["data"]
-            message(
-                f"👇 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*0.002/1000}",
-                key=f"{i}",
-            )
-            st.code(answer)
+            if domain_name.lower() == "coder":
+                message(
+                    f"""
+                        👇 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*0.002/1000} \n {answer}
+                    """
+                )
+            else:
+                message(
+                    f"👇 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*0.002/1000}",
+                    key=f"{i}",
+                )
+                st.code(answer)
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
