@@ -399,5 +399,5 @@ if st.session_state["generated"]:
             #     st.session_state['generated'][i]['data'],
             #     key=f"{i}"
             # )
-            st.markdown(st.session_state['generated'][i]['data'])
+            st.components.v1.html(st.session_state['generated'][i]['data'])
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
