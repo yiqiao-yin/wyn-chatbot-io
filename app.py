@@ -354,7 +354,7 @@ with container:
                 "Model Yin is a general chatbot currently and does not feed into other domains.",
                 icon="⚠️",
             )
-        submit_button = st.form_submit_button(label="Send")
+        submit_button = st.form_submit_button(label="Send", enter_to_submit=True)
 
     if submit_button and user_input:
         if domain_name == "General":
