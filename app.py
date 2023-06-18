@@ -89,7 +89,7 @@ def call_chatgpt(prompt: str) -> str:
 
     # Use the OpenAI API to generate a response based on the input prompt.
     response = openai.Completion.create(
-        model="text-davinci-003",
+        model="gpt-4",
         prompt=prompt,
         temperature=0.5,
         max_tokens=500,
