@@ -11,4 +11,4 @@ scipy                             == 1.10.1
 sentence-transformers             == 2.2.2
 setuptools                        == 65.6.3
 transformers                      == 4.29.2
-chainlit                          == 0.4.1
+# chainlit                          == 0.4.1

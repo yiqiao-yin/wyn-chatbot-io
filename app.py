@@ -8,12 +8,12 @@ import openai
 import pandas as pd
 import requests
 import streamlit as st
-from streamlit_chat import message
-import chainlit as cl
 from dotenv import find_dotenv, load_dotenv
 from PyPDF2 import PdfReader
 from scipy.spatial.distance import cosine
 from sentence_transformers import SentenceTransformer
+from streamlit_chat import message
+
 
 _ = load_dotenv(find_dotenv())  # read local .env file
 
@@ -453,14 +453,3 @@ if st.session_state["generated"]:
                 )
                 st.code(answer)
             counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
-
-
-
-@cl.on_message
-async def main(message: str):
-    # Your custom logic goes here...
-
-    # Send a response back to the user
-    await cl.Message(
-        content=f"Received: {message}",
-    ).send()
