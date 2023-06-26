@@ -26,8 +26,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Load data
-df = pd.read_csv("lh_ar_2022.csv")
 
 # Initialise session state variables
 if "generated" not in st.session_state:
@@ -51,8 +49,15 @@ similarity_indicator = st.sidebar.radio(
 model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
     "Choose a domain:",
-    ("General", "Coder", "Labcorp 2022 Annual Report", "CBT", "Upload Your Own"),
+    ("General", "Coder", "Labcorp 2022 Annual Report", "Mckinsey Generative AI Report", "CBT", "Upload Your Own"),
 )
+# Load data
+if domain_name == "Labcorp 2022 Annual Report":
+    df = pd.read_csv("lh_ar_2022.csv")
+elif domain_name == "Mckinsey Generative AI Report":
+    df = pd.read_csv("mckinsey_gen_ai.csv")
+else:
+    df = pd.DataFrame()
 counter_placeholder = st.sidebar.empty()
 counter_placeholder.write(f"Next item ... ")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
@@ -389,6 +394,23 @@ with container:
             else:
                 output = call_chatgpt(processed_user_question)
         elif domain_name == "Labcorp 2022 Annual Report":
+            df_screened_by_dist_score = add_dist_score_column(
+                df, user_input, similarity_indicator.lower().replace("-", "")
+            )
+            qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
+
+            processed_user_question = f"""
+                Learn from the context: {qa_pairs}
+                Answer the following question as if you are the AI assistant: {user_input}
+                Produce a text answer that are complete sentences.
+            """
+            if model_name == "ChatGPT":
+                output = call_chatgpt(processed_user_question)
+            elif model_name == "Palm":
+                output = call_palm(processed_user_question)
+            else:
+                output = call_chatgpt(processed_user_question)
+        elif domain_name == "Mckinsey Generative AI Report":
             df_screened_by_dist_score = add_dist_score_column(
                 df, user_input, similarity_indicator.lower().replace("-", "")
             )
