@@ -479,9 +479,6 @@ with container:
             search_results = internet_search(user_input)
             context = search_results['context']
             urls = search_results['urls']
-            if len(context) < 10:
-                context = read_url(urls[0])
-                context = context[0:2000]
             processed_user_question = f"""
                 You are a search engine and you have information from the internet here: {context}.
                 In addition, you have a list of URls as reference: {urls}.
