@@ -2,6 +2,7 @@ import json
 import os
 from typing import Dict, List, Union
 
+from duckduckgo_search import DDGS
 import google.generativeai as palm
 import numpy as np
 import openai
@@ -21,7 +22,7 @@ _ = load_dotenv(find_dotenv())  # read local .env file
 st.set_page_config(page_title="WYN AI", page_icon=":robot_face:")
 st.markdown(
     f"""
-        <h1 style='text-align: center;'>W.Y.N. Artificial Intelligence😬</h1>
+        <h1 style='text-align: center;'>W.Y.N. Artificial Intelligence🤖</h1>
     """,
     unsafe_allow_html=True,
 )
@@ -49,7 +50,7 @@ similarity_indicator = st.sidebar.radio(
 model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
     "Choose a domain:",
-    ("General", "Coder", "Labcorp 2022 Annual Report", "Mckinsey Generative AI Report", "CBT", "Upload Your Own"),
+    ("General", "Coder", "Labcorp 2022 Annual Report", "Mckinsey Generative AI Report", "CBT", "WYN-Search", "Upload Your Own"),
 )
 # Load data
 if domain_name == "Labcorp 2022 Annual Report":
@@ -329,6 +330,17 @@ def extract_data(feed):
     return text
 
 
+def internet_search(prompt: str) -> Dict[str, str]:
+    content_bodies = []
+    list_of_urls = []
+    with DDGS() as ddgs:
+        for r in ddgs.text(prompt, region='wt-wt', safesearch='Off', timelimit='y'):
+            content_bodies.append(r['body'])
+            list_of_urls.append(r['href'])
+    
+    return {'context': content_bodies, 'urls': list_of_urls}
+
+
 def token_size(string):
     tokens = string.split()
     return float(len(tokens))
@@ -433,6 +445,22 @@ with container:
                 Answer the following question from the user: {user_input}
                 Make sure to be aware of suicidal symptoms, depression, anxiety disorders.
                 Be patient with the user and try to comfort them.
+            """
+            if model_name == "ChatGPT":
+                output = call_chatgpt(processed_user_question)
+            elif model_name == "Palm":
+                output = call_palm(processed_user_question)
+            else:
+                output = call_chatgpt(processed_user_question)
+        elif domain_name == "WYN-Search":
+            search_results = internet_search(user_input)
+            context = search_results['context']
+            urls = search_results['urls']
+            processed_user_question = f"""
+                You are a search engine and you have information from the internet here: {context}.
+                In addition, you have a list of URls as reference: {urls}.
+                Answer the following question: {user_input} based on the information above. 
+                Make sure to return URls as list of citations. 
             """
             if model_name == "ChatGPT":
                 output = call_chatgpt(processed_user_question)
