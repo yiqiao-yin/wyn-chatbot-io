@@ -48,17 +48,12 @@ similarity_indicator = st.sidebar.radio(
     ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "STS-Palm", "Next..."),
 )
 model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Next..."))
-# domain_name = st.sidebar.radio(
-#     "Choose a domain:",
-#     ("General", "Coder", "Labcorp 2022 Annual Report", "Mckinsey Generative AI Report", "CBT", "WYN-Search", "Upload Your Own"),
-# )
-option = st.sidebar.selectbox(
-    'Choose a domain:',
-    ("General", "Coder", "Labcorp 2022 Annual Report", "Mckinsey Generative AI Report", "CBT", "WYN-Search", "Upload Your Own"))
+domain_name = st.sidebar.radio(
+    "Choose a domain:",
+    ("General", "Coder", "Labcorp 2022 Annual Report", "Mckinsey Generative AI Report", "CBT", "WYN-Search", "Upload Your Own"),
+)
 # Load data
-if domain_name is None:
-    df = pd.DataFrame()
-elif domain_name == "Labcorp 2022 Annual Report":
+if domain_name == "Labcorp 2022 Annual Report":
     df = pd.read_csv("lh_ar_2022.csv")
 elif domain_name == "Mckinsey Generative AI Report":
     df = pd.read_csv("mckinsey_gen_ai.csv")
