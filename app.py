@@ -334,9 +334,14 @@ def internet_search(prompt: str) -> Dict[str, str]:
     content_bodies = []
     list_of_urls = []
     with DDGS() as ddgs:
-        for r in ddgs.text(prompt, region='wt-wt', safesearch='Off', timelimit='y')[0:5]:
-            content_bodies.append(r['body'])
-            list_of_urls.append(r['href'])
+        i = 0
+        for r in ddgs.text(prompt, region='wt-wt', safesearch='Off', timelimit='y'):
+            if i <= 5:
+                content_bodies.append(r['body'])
+                list_of_urls.append(r['href'])
+                i += 1
+            else:
+                break
     
     return {'context': content_bodies, 'urls': list_of_urls}
 
