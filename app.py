@@ -52,7 +52,7 @@ model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Nex
 #     "Choose a domain:",
 #     ("General", "Coder", "Labcorp 2022 Annual Report", "Mckinsey Generative AI Report", "CBT", "WYN-Search", "Upload Your Own"),
 # )
-option = st.selectbox(
+option = st.sidebar.selectbox(
     'Choose a domain:',
     ("General", "Coder", "Labcorp 2022 Annual Report", "Mckinsey Generative AI Report", "CBT", "WYN-Search", "Upload Your Own"))
 # Load data
