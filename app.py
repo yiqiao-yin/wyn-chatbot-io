@@ -341,6 +341,29 @@ def internet_search(prompt: str) -> Dict[str, str]:
     return {'context': content_bodies, 'urls': list_of_urls}
 
 
+def read_url(url: str) -> str:
+  """
+  Reads the contents of a public URL as a string.
+
+  Args:
+    url: A public URL.
+
+  Returns:
+    A string containing the contents of the URL.
+  """
+
+  # Create a request object.
+  request = requests.get(url)
+
+  # Check the response status code.
+  if request.status_code == 200:
+    # The request was successful, so we can read the content.
+    return request.content.decode("utf-8")
+  else:
+    # The request failed, so we raise an exception.
+    raise Exception("Unable to read URL.")
+
+
 def token_size(string):
     tokens = string.split()
     return float(len(tokens))
@@ -456,6 +479,9 @@ with container:
             search_results = internet_search(user_input)
             context = search_results['context']
             urls = search_results['urls']
+            if len(context) < 10:
+                context = read_url(urls[0])
+                context = context[0:2000]
             processed_user_question = f"""
                 You are a search engine and you have information from the internet here: {context}.
                 In addition, you have a list of URls as reference: {urls}.
