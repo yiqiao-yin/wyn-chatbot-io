@@ -478,6 +478,7 @@ with container:
         elif domain_name == "WYN-Search":
             search_results = internet_search(user_input)
             context = search_results['context']
+            context = ' '.join(context)[0:2000]
             urls = search_results['urls']
             processed_user_question = f"""
                 You are a search engine and you have information from the internet here: {context}.
