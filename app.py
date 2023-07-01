@@ -50,13 +50,23 @@ similarity_indicator = st.sidebar.radio(
 model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Next..."))
 domain_name = st.sidebar.radio(
     "Choose a domain:",
-    ("General", "Coder", "Labcorp 2022 Annual Report", "Mckinsey Generative AI Report", "CBT", "WYN-Search", "Upload Your Own"),
+    (
+        "General",
+        "Coder",
+        "Labcorp 2022 Annual Report",
+        "Mckinsey Generative AI Report",
+        "Adopting AI Responsibly",
+        "CBT",
+        "WYN-Search",
+        "Upload Your Own"),
 )
 # Load data
 if domain_name == "Labcorp 2022 Annual Report":
     df = pd.read_csv("lh_ar_2022.csv")
 elif domain_name == "Mckinsey Generative AI Report":
     df = pd.read_csv("mckinsey_gen_ai.csv")
+elif domain_name == "Adopting AI Responsibly":
+    df = pd.read_csv("adopt_ai_responsibly.csv")
 else:
     df = pd.DataFrame()
 counter_placeholder = st.sidebar.empty()
@@ -433,24 +443,9 @@ with container:
                 output = call_yin_test1(api_url)["answer"]
             else:
                 output = call_chatgpt(processed_user_question)
-        elif domain_name == "Labcorp 2022 Annual Report":
-            df_screened_by_dist_score = add_dist_score_column(
-                df, user_input, similarity_indicator.lower().replace("-", "")
-            )
-            qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
-
-            processed_user_question = f"""
-                Learn from the context: {qa_pairs}
-                Answer the following question as if you are the AI assistant: {user_input}
-                Produce a text answer that are complete sentences.
-            """
-            if model_name == "ChatGPT":
-                output = call_chatgpt(processed_user_question)
-            elif model_name == "Palm":
-                output = call_palm(processed_user_question)
-            else:
-                output = call_chatgpt(processed_user_question)
-        elif domain_name == "Mckinsey Generative AI Report":
+        elif domain_name in ["Labcorp 2022 Annual Report", 
+                             "Mckinsey Generative AI Report",
+                             "Adopting AI Responsibly"]:
             df_screened_by_dist_score = add_dist_score_column(
                 df, user_input, similarity_indicator.lower().replace("-", "")
             )

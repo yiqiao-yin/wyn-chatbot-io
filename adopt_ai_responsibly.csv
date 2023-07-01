@@ -1,0 +1,2002 @@
+,context,questions,answers
+0,"Adopting AI Responsibly:  
+Guidelines for Procurement of AI 
+Solutions by the Private Sector
+INSIGHT REPORT
+JUNE 2023In collaboration  
+with GEP","1. What are the guidelines for the procurement of AI solutions by the private sector?
+2. What are the benefits of following these guidelines?
+3. What are the potential risks of not following these guidelines?","1. The guidelines for the procurement of AI solutions by the private sector are to ensure that AI solutions are ethically sound and do not pose a risk to society.
+2. The benefits of following these guidelines are that AI solutions will be safe and ethical, and will not pose a risk to society.
+3. The potential risks of not following these guidelines are that AI solutions may be unsafe and unethical, and may pose a risk to society."
+1,"Images: Getty Images© 2023 World Economic Forum. All rights 
+reserved. No part of this publication may 
+be reproduced or transmitted in any form 
+or by any means, including photocopying 
+and recording, or by any information 
+storage and retrieval system.Disclaimer 
+This document is published by the  
+World Economic Forum as a contribution 
+to a project, insight area or interaction. 
+The findings, interpretations and 
+conclusions expressed herein are a result 
+of a collaborative process facilitated and 
+endorsed by the World Economic Forum 
+but whose results do not necessarily 
+represent the views of the World Economic 
+Forum, nor the entirety of its Members, 
+Partners or other stakeholders.Contents
+Foreword 3
+Executive summary 4
+Introduction 5
+The AI acquisition framework 11
+1 Business strategy 12
+2 Commercial strategy 15
+3 Data strategy 18
+4 Ethics and sustainability 20
+5 Governance, risk and compliance 24
+6 Conclusion 28
+Appendix 29
+Contributors 30
+Endnotes 32
+Adopting AI Responsibly: Guidelines for Procurement
+2","1. What are the key considerations for businesses when adopting AI?
+2. What are the benefits of adopting a commercial strategy for AI?
+3. What are the benefits of adopting a data strategy for AI?
+4. What are the benefits of adopting an ethics and sustainability strategy for AI?
+5. What are the benefits of adopting a governance, risk and compliance strategy for AI?
+6. What are the key conclusions of the report?","1. When adopting AI, businesses should consider their business strategy, commercial strategy, data strategy, ethics and sustainability strategy, and governance, risk and compliance strategy.
+2. The benefits of adopting a commercial strategy for AI include increased efficiency, competitiveness, and profitability.
+3. The benefits of adopting a data strategy for AI include improved decision-making, increased efficiency, and improved customer experience.
+4. The benefits of adopting an ethics and sustainability strategy for AI include improved decision-making, increased efficiency, and improved customer experience.
+5. The benefits of adopting a governance, risk and compliance strategy for AI include improved decision-making, increased efficiency, and improved customer experience.
+6. The key conclusions of the report are that businesses should adopt a holistic approach to AI adoption, and should consider their business strategy, commercial strategy, data strategy, ethics and sustainability strategy, and governance, risk and compliance strategy."
+2,"Foreword
+As the use of artificial intelligence (AI) continues to 
+grow across industries, it has become imperative 
+for commercial enterprises to ensure that the AI 
+solutions they procure are responsible and ethical. 
+The growth of the global AI market is staggering – 
+valued at $136 billion in 2022 and is estimated to  
+expand at a compound annual growth rate (CAGR) 
+of 37.3% from 2023 to 2030. The growing use 
+and prevalence of generative AI technology and 
+the emergence of advanced GPT models – with 
+their tremendous potential and unique ethical 
+challenges – underscores an even greater need 
+to establish standards for responsible AI practices 
+and procurement.
+Using AI responsibly is important not only because 
+organizations have a social responsibility and a 
+reputation to maintain but also for the long-term 
+viability and well-being of business and society. 
+That includes protecting businesses from potential 
+risks down the road, particularly related to areas 
+such as intellectual property, data and privacy.
+While AI systems are rapidly evolving, in-house 
+AI expertise often stays limited, and there are no 
+standard benchmarks and assessment criteria to 
+aid the end-to-end procurement process.To address this gap, the World Economic 
+Forum, in partnership with GEP , has released a 
+comprehensive guide for commercial organizations, 
+Adopting AI Responsibly: Guidelines for 
+Procurement of AI Solutions by the Private Sector.
+In this report, we present a structured framework for 
+evaluating the implications of acquiring AI solutions, 
+emphasizing the importance of transparency, 
+accountability and human-centred design from 
+development to implementation. The framework 
+offers guidance on evaluating potential solutions 
+based on bias, privacy and security. It shares 
+recommendations on integrating ethical principles 
+into the procurement criteria and processes, often 
+involving multiple stakeholders. Finally, it offers 
+insights on how to overlay all these steps with 
+strong governance criteria, ensuring that these 
+principles are applied.
+In short, this framework is an essential resource 
+for business and procurement leaders who want 
+to guarantee that their organizations are at the 
+forefront of socially responsible AI adoption. Mudit Kumar 
+Vice-President, 
+Consulting, GEPCathy Li 
+Head, AI, Data and 
+Metaverse; Member of 
+the Executive Committee, 
+World Economic Forum
+Adopting AI Responsibly: 
+Guidelines for Procurement
+June 2023
+Adopting AI Responsibly: Guidelines for Procurement
+3","1. What is the global AI market estimated to be worth in 2022?
+2. What is the compound annual growth rate of the global AI market from 2023 to 2030?
+3. What are the risks associated with the irresponsible use of AI?
+4. What is the importance of transparency, accountability, and human-centred design in the procurement of AI solutions?
+5. What are the steps involved in the procurement of AI solutions?","1. The global AI market is estimated to be worth $136 billion in 2022.
+2. The compound annual growth rate of the global AI market from 2023 to 2030 is 37.3%.
+3. The risks associated with the irresponsible use of AI include intellectual property theft, data breaches, and privacy violations.
+4. Transparency, accountability, and human-centred design are important in the procurement of AI solutions because they ensure that the solutions are responsible and ethical.
+5. The steps involved in the procurement of AI solutions include evaluating the implications of acquiring the solution, assessing the solution based on bias, privacy, and security, and incorporating ethical principles into the procurement criteria and process."
+3,"Executive summary
+The demand for artificial intelligence (AI) solutions 
+in enterprises has grown by leaps and bounds 
+in the past few years, driven by improved data 
+availability, advanced algorithms and increased 
+processing power. While the use of AI tools delivers 
+significant value, it is necessary to approach it 
+carefully and avoid its potentially negative, and even 
+dangerous, consequences. The World Economic 
+Forum, in partnership with GEP , has released this 
+comprehensive guide for commercial organizations 
+– across industries – to facilitate the process of 
+identifying, selecting and implementing AI solutions 
+responsibly and ethically. 
+This report is a practical toolkit that will help 
+navigate the challenges of AI procurement  
+through a structured framework. It is directional,  
+not prescriptive and industry agnostic, not  
+problem specific. 
+It discusses the need for AI solutions to be closely 
+aligned with business goals, ethical standards and 
+regulatory requirements, as well as the importance 
+of stakeholder collaboration and an enterprise-
+wide evaluation process. It highlights five key 
+considerations – business strategy, commercial 
+strategy, data strategy, ethics and sustainability, 
+and governance, risk and compliance – against 
+which AI/machine learning (ML) solutions can be assessed for responsible AI acquisition, with 
+procurement as the orchestrator driving the 
+implementation of this framework.
+Broadly, the report provides practical advice on:
+ –Assessing AI solutions’ ethical standards and 
+regulatory compliance
+ –Aligning solutions with business and  
+commercial goals
+ –Evaluating their potential impact.
+From automating repetitive tasks, reducing errors 
+or risks and optimizing pricing to identifying new 
+opportunities, making accurate forecasts and 
+enabling investment decisions, AI solutions can 
+help enterprises perform a wide range of tactical 
+and strategic activities to improve efficiency and 
+support growth. With careful and responsible 
+procurement, organizations can harness the power 
+of AI to improve their productivity and gain a 
+competitive edge.
+The customizable framework in this AI procurement 
+guide aims to open doors for organizations looking 
+to ethically exploit AI’s disruptive power.Offering practical guidance for responsible 
+procurement and implementation of AI 
+solutions in the private sector.
+Adopting AI Responsibly: Guidelines for Procurement
+4","1. What are the benefits of using AI tools? 
+2. What are the dangers of using AI tools? 
+3. What are the five key considerations for responsible AI procurement? 
+4. What is the goal of the AI procurement guide? 
+5. What are some of the practical advice offered in the guide?","1. The benefits of using AI tools include improved data availability, advanced algorithms, and increased processing power. 
+2. The dangers of using AI tools include potential negative consequences, such as job losses, and even dangerous consequences, such as accidents. 
+3. The five key considerations for responsible AI procurement are business strategy, commercial strategy, data strategy, ethics and sustainability, and governance, risk and compliance. 
+4. The goal of the AI procurement guide is to provide practical advice on how to ethically exploit AI's disruptive power. 
+5. Some of the practical advice offered in the guide includes assessing AI solutions' ethical standards and regulatory compliance, aligning solutions with business and commercial goals, and evaluating their potential impact."
+4,"Introduction
+Artificial intelligence (AI) in an enterprise refers 
+to the use of AI technology and applications in 
+private sector organizations to improve operations, 
+increase efficiency and drive growth. 
+AI adoption in enterprises has grown exponentially 
+over the past decade because of the greater 
+availability of data, the development of more 
+sophisticated algorithms and the increased 
+processing power of computers. Advancements 
+in cloud computing and the emergence of edge 
+computing have also made implementing AI-
+powered solutions easier and more cost-effective.
+However, private sector enterprises find 
+navigating the procurement and deployment of 
+AI technologies a tremendous challenge because 
+of a variety of reasons, from lack of requisite 
+skills to the definition of strategy, data quality 
+and established playbooks to follow. This report 
+aims to facilitate the responsible and ethical 
+procurement of AI/machine learning (ML) solutions 
+in commercial organizations by developing 
+comprehensive guidelines and a practical toolkit 
+that are directional rather than prescriptive. It will 
+help enterprises evaluate AI/ML solutions through a 
+robust procurement framework and build a holistic 
+approach for acquiring and deploying AI solutions 
+to achieve organizational goals.
+Why enterprises need AI
+The history of AI in enterprises can be traced back 
+to the early days of computing when businesses 
+first began experimenting with rule-based and 
+expert systems, which were designed to perform 
+specific tasks, such as analysing data and making 
+predictions. These systems were limited in their 
+capabilities and required significant human input to 
+function effectively.
+In the 1990s, ML algorithms began to be 
+developed, allowing AI systems to learn from data 
+and improve performance over time. This marked 
+a turning point in the history of enterprise AI, as 
+ML-powered systems could be used to analyse 
+large amounts of data and make predictions 
+more efficiently and accurately. In the 2000s, 
+advancements in computing power and the 
+availability of large volumes of data began to drive 
+the adoption of AI in enterprises. Businesses, realizing the potential of AI to improve operations 
+and drive growth, started making significant 
+investments in AI-powered systems.
+One of the key drivers of AI is automation. AI-
+powered automation can help businesses automate 
+repetitive and time-consuming tasks – such as data 
+entry, customer service and inventory management 
+– and improve speed and accuracy as well as 
+reduce costs. It can free up human workers to 
+focus on more complex and strategic tasks.
+AI-powered decision-making is another common 
+use case in enterprises, where AI is used to analyse 
+data and provide recommendations to decision-
+makers. AI can be used to optimize pricing, 
+identify new business opportunities or even make 
+investment decisions. 
+While AI is becoming an increasingly important tool 
+for organizations, to fully realize its benefits, they 
+need to invest in the necessary infrastructure, talent 
+and technologies. Additionally, businesses should 
+address the challenges associated with acquiring 
+and implementing AI solutions, such as lack of 
+expertise, data privacy and security concerns.
+Why do we need responsible AI 
+procurement guidelines?
+AI/ML adoption is skyrocketing, especially  
+post-COVID-19, with far-reaching impact  
+on businesses
+Organizations worldwide are increasingly adopting 
+AI and ML to support business growth, improve 
+efficiencies and gain a competitive edge. The 
+global AI market is anticipated to hit the $1,500 
+billion mark by 2030,1 driven by the substantial 
+investments made by tech giants in R&D to 
+advance technology. In many cases, AI solutions 
+are deeply embedded into the organization’s 
+enterprise applications, making recommendations 
+and predictions and influencing critical decision-
+making. Thus, it’s essential to ensure that AI 
+delivers ethical, responsible and reliable solutions. 
+Organizations must perform critical evaluations of 
+AI solutions at the time of selection and establish 
+an ongoing review process to make sure that the 
+solution remains aligned with business intent and 
+organizational values. AI/ML solutions should address strategy 
+alignment, data integration, ethical compliance 
+and risk assessment.
+Adopting AI Responsibly: Guidelines for Procurement
+5","1. What are the benefits of AI in enterprises?
+2. What are some of the key challenges associated with acquiring and implementing AI solutions?
+3. What are some of the most common use cases for AI in enterprises?
+4. Why is it important for businesses to invest in the necessary infrastructure, talent and technologies for AI?
+5. What are some of the challenges associated with AI adoption?","1. The benefits of AI in enterprises include improved speed and accuracy, reduced costs, and freed up human workers to focus on more complex and strategic tasks.
+2. The key challenges associated with acquiring and implementing AI solutions include lack of expertise, data privacy and security concerns, and lack of infrastructure, talent, and technologies.
+3. The most common use cases for AI in enterprises are AI-powered automation, AI-powered decision-making, and data analysis.
+4. It is important for businesses to invest in the necessary infrastructure, talent, and technologies for AI because AI is becoming an increasingly important tool for organizations.
+5. The challenges associated with AI adoption include lack of expertise, data privacy and security concerns, and lack of infrastructure, talent, and technologies."
+5,"Limited guidance on industry standard practices 
+and ways to minimize organizational risks
+While nearly all C-suite executives view AI as critical, 
+most acknowledge the struggle to navigate the 
+procurement and deployment of AI technologies. 
+Enterprises must consider some key factors while 
+adopting AI, including: 
+ –Business strategy alignment: Does the AI 
+strategy align with larger corporate strategy? 
+Does the AI solution enable optimized business 
+outcomes, delivering high value to the 
+organization? How does it align with long-term 
+organizational vision and strategy?
+ –Business case: What are the non-monetary 
+gains? Is the investment justified? Are 
+commercial terms optimized for long-term return 
+on investment (ROI) and total cost optimization?
+ –Technology and data integration: Does the 
+solution meet the company’s and regulatory 
+data protection requirements? How do you 
+regulate the outsourcing of data management and hosting? What data is needed and how do 
+you collect and cleanse it? 
+ –Ethics alignment: Are the AI system and 
+solution provider aligned with organizational 
+values and complying with ethical standards? 
+ –Risk assessment: What are the risks? How 
+do you conduct an initial impact assessment 
+to ensure ethical, equitable and sustainable 
+deployment? What are the challenges and 
+successes the industry has experienced?
+ –Agile and collaborative AI system 
+integration: Is a scalable AI system already in 
+place? How can AI applications be integrated 
+into processes so they work effectively for 
+delivery teams?
+Scope of the guidelines
+The scope of this AI procurement guidebook is 
+focused wholly on procuring AI applications.
+Understanding AI: tools, techniques, enablers FIGURE 1
+Core Al techniques and 
+models are used to process, 
+solve and learn based on 
+intended application within the 
+organization. Often, core Al 
+techniques are combined with 
+other technologies to drive the 
+desired outcomes.
+Core Al techniques are 
+mathematical and statistical 
+models and frameworks that 
+are deployed to process vast 
+amounts of data, make 
+decisions, learn about 
+outcomes, store results and 
+use them as additional data 
+point to improve future 
+decisions.
+Al enablers and support 
+infrastructure are the core 
+foundation technologies that 
+an Al ecosystem needs to be 
+successful. Advancements in 
+these technologies improve 
+the overall effectiveness and 
+efﬁciency of Al solutions.AI applicationsAI applications
+-Augmented research 
+(marketing, medicine, 
+science etc.)
+-Autonomous vehicles 
+and drones
+-Biometric, facial and gesture 
+recognition
+-Extended reality
+-Generative product design-Intelligent agents
+-Predictive systems 
+(maintenance, retail, trading 
+etc.)
+-Recommendation systems
+-Robotic process automation
+-Test, speech, image and video 
+recognition
+Core AI techniquesCore AI techniques
+-Machine learning
+-Deep learning
+-Neural networks
+-Reinforcement learning
+-Supervised learning
+-Unsupervised learning 
+-Embodiment
+-Autonomous robotics
+-Human augmentation
+Core AI techniques
+-Cybersecurity
+-Data analytics
+-Ethics and responsibility 
+-Structured and unstructured 
+dataAI support infrastructure
+-Cloud 
+-High-speed internet and 
+processors
+-Sensors, internet of things
+-Mobile phones and devices
+-Robotics-Rules-based reasoning
+-Decision-making 
+-Expert systems 
+-Knwoledge representation
+-Planning and scheduling 
+-Seach and optimization
+-Perception
+-Augmentation and virtual 
+reality 
+-Machine vision 
+-Natural language processing
+AI 
+enablersAI support
+infrastructure
+Source: World Economic Forum, Empowering AI Leadership, 2022.
+Adopting AI Responsibly: Guidelines for Procurement
+6","1. What are the key factors that enterprises must consider while adopting AI?
+2. What are the non-monetary gains of adopting AI?
+3. How do you regulate the outsourcing of data management and hosting?
+4. What data is needed for AI deployment and how do you collect and cleanse it?
+5. Are AI system and solution providers aligned with organizational values and complying with ethical standards?
+6. What are the risks of AI deployment and how do you conduct an initial impact assessment?","1. Enterprises must consider the business strategy alignment, business case, technology and data integration, ethics alignment, and risk assessment while adopting AI.
+2. The non-monetary gains of adopting AI include optimized business outcomes, high value to the organization, and long-term organizational vision and strategy alignment.
+3. Data management and hosting can be outsourced, but enterprises must ensure that the AI system and solution providers are aligned with organizational values and complying with ethical standards.
+4. The data needed for AI deployment includes business data, regulatory data, and data that is needed to collect and cleanse it.
+5. AI system and solution providers may not always be aligned with organizational values and may not comply with ethical standards.
+6. The risks of AI deployment include data privacy and security breaches, unethical AI applications, and unintended consequences."
+6,"How the AI guidebook will help
+This report is a detailed, step-by-step guide that 
+will help enterprises interested in acquiring AI 
+solutions address each of the key considerations 
+listed earlier. Each section comprises questions that 
+can be used to assess and understand suppliers 
+during the procurement process and will help find 
+the best fit for your organization’s requirements. 
+While the toolkit focuses primarily on AI software, 
+it can be tailored and adapted for solutions with AI 
+capabilities. These guidelines will help:
+ –Provide a holistic assessment framework – by 
+evaluating everything from risk to ethics and 
+biases – to enable responsible acquisition of AI
+ –Serve as a general, industry-agnostic guidebook 
+for AI acquisition, covering areas such as 
+supplier landscaping, critical stakeholder 
+identification, supplier evaluation framework and 
+supplier selection
+ –Enable decision-making while balancing 
+business needs with social and ethical 
+responsibility by developing an objective 
+supplier questionnaire-based evaluation
+ –Provide a framework for collaboration bringing 
+key stakeholders together.
+The guidelines are not intended to:
+ –Be a lift-and-shift solution for all industries,  
+but an easily customizable guidebook
+ –Outline specific regulations or laws to consider, 
+but direct users towards evaluating AI solution 
+providers for appropriate regulations and 
+standards –Define acceptable levels for each of the criteria 
+outlined but capture the relevant criteria for 
+responsible AI acquisition
+ –Provide a mutually exclusive, completely 
+exhaustive (MECE) supplier questionnaire, 
+but a directionally comprehensive 
+questionnaire to aid decision-making 
+on the procurement of AI solutions
+ –Identify suitable physical robotic tools and  
+AI hardware systems, but for AI software 
+solutions/applications.
+How the guidelines 
+were developed
+This guidebook was designed by the World 
+Economic Forum’s Centre for the Fourth Industrial 
+Revolution in association with GEP and in active 
+collaboration with multiple Forum community 
+partners representing both buy and sell sides from 
+industries such as oil and gas, energy, construction 
+and consulting, among others. 
+It explores and incorporates key considerations 
+and guidelines for responsible AI procurement in 
+commercial organizations, addressing real-world 
+business needs and challenges.
+Over one year, the core team organized several 
+workshops with over 25 community partners – 
+representatives from industries and AI solution 
+providers – to coalesce collective knowledge of 
+AI and procurement and design standardized 
+guidelines that can be adopted easily across 
+organizations and industries.
+Adopting AI Responsibly: Guidelines for Procurement
+7","1. What is the goal of the AI guidebook?
+2. What are the key considerations that the guidebook helps with?
+3. How were the guidelines for the guidebook developed?","1. The goal of the AI guidebook is to help enterprises interested in acquiring AI solutions address each of the key considerations listed earlier.
+2. The key considerations that the guidebook helps with are risk, ethics, and biases.
+3. The guidelines for the guidebook were developed by the World Economic Forum’s Centre for the Fourth Industrial Revolution in association with GEP and in active collaboration with multiple Forum community partners representing both buy and sell sides from industries such as oil and gas, energy, construction, and consulting."
+7,"How to use the guidelines
+Before an enterprise invests in AI solutions, it should 
+consider the key principles outlined in this report. 
+These guidelines are meant to be followed only 
+after determining that AI is the best solution for the 
+specific problem. The guidelines shared here are 
+not meant to be a one-size-fits-all solution for any 
+and all challenges that private sector enterprises 
+may face, but by shaping the way new AI solutions 
+are procured, they can improve the overall fit of the 
+AI solution in the organization.
+Handling each AI acquisition separately can lead 
+to a lack of alignment with the organization’s 
+overall strategy. The evaluation of AI solutions 
+requires inputs from multiple internal stakeholders, 
+each best suited to evaluate the solution on 
+specific parameters. It’s crucial to have a unified, 
+collaborative approach in evaluating and selecting 
+the AI solution. Internal separation and lack 
+of communication within an organization can 
+obstruct the effective functioning of artificial 
+intelligence systems. The procurement team (or, 
+at an enterprise level, the procurement leadership team) for whom these guidelines are primarily 
+designed can serve as the central point to ensure 
+that all stakeholders are involved in a timely and 
+appropriate manner, leading to a cohesive effort in 
+acquiring the solution.
+The guidelines in this report are designed to assist 
+stakeholders in advancing their AI goals and to 
+provide direction for the procurement of AI-driven 
+solutions. They will help:
+ –Business teams to accelerate the achievement 
+of their targets
+ –Procurement teams to create requests for 
+proposals (RFPs) for AI products and manage 
+the procurement process efficiently 
+ –Data teams and practitioners to safeguard 
+organizational interests and identify and manage 
+potential risks
+ –AI-solution providers to better understand the 
+core expectations in enterprise AI projects 
+and align their proposals with the emerging 
+standards for AI procurement. 
+Procurement and AI strategy FIGURE 2
+Data gathering 
+and cleansing
+Stakeholder needs 
+across different 
+business units
+System implementation
+and trackingRisk factorsIntegration with
+existing IT infrastructure
+Project strategy, 
+feasibility 
+and scalability Procurement is a key enabler in AI adoption
+Procurement is best positioned within an organization to help the C-suite deﬁne and create a holistic
+blueprint for the organization’s Al strategy
+Procurement
+Adopting AI Responsibly: Guidelines for Procurement
+8","1. What are the key principles outlined in the report?
+2. What are the guidelines meant to be followed only after determining that AI is the best solution for the specific problem?
+3. What is the evaluation of AI solutions requires inputs from multiple internal stakeholders?
+4. What is the importance of having a unified, collaborative approach in evaluating and selecting the AI solution?
+5. How can the procurement team ensure that all stakeholders are involved in a timely and appropriate manner?","1. The key principles outlined in the report are meant to help stakeholders in advancing their AI goals and to provide direction for the procurement of AI-driven solutions.
+2. The guidelines meant to be followed only after determining that AI is the best solution for the specific problem include considering the key principles outlined in the report, and ensuring that all stakeholders are involved in a timely and appropriate manner.
+3. The evaluation of AI solutions requires inputs from multiple internal stakeholders, each best suited to evaluate the solution on specific parameters.
+4. Having a unified, collaborative approach in evaluating and selecting the AI solution is important to ensure that all stakeholders are involved in a timely and appropriate manner.
+5. The procurement team can ensure that all stakeholders are involved in a timely and appropriate manner by serving as the central point to ensure that all stakeholders are involved in a timely and appropriate manner."
+8,"The following teams, led by procurement, should 
+collaborate to ensure a holistic evaluation of the 
+AI solution under consideration. Within these 
+teams would be data scientists, data architects, data engineers, legal and risk management 
+professionals, product owners and business 
+analysts, among others.
+Procurement and the need for cross-functional collaboration TABLE 1
+Team Business/end userIT and  
+cybersecurityAI centre of  
+excellence/
+data team Data management Procurement
+Role  –Assessment and 
+prioritization of use 
+cases
+ –Process definitions
+ –Workflow design
+ –Defining business 
+requirements
+ –Defining expected 
+outcomes
+ –Exception 
+management
+ –Change 
+management –Architecture and 
+integration design
+ –Infrastructure 
+assessment 
+and design
+ –Security 
+assessment 
+and design
+ –Application 
+management 
+and support
+ –Platform 
+deployment 
+and scalability 
+assessment
+ –Software 
+and licence 
+management –AI and cognitive 
+capability 
+assessment
+ –Tool adaptability 
+and configuration 
+of needs
+ –Process modelling
+ –Service support 
+capabilities
+ –Testing and 
+debugging
+ –Governance, risk 
+and compliance
+ –User interface (UI)/
+user experience 
+(UX) management
+ –Change 
+management
+ –AI ethics and 
+sustainability –Data needs and 
+consumption 
+requirements
+ –Data governance 
+framework
+ –Data integrity 
+requirements –Align with the 
+business team on 
+requirements
+ –Collaborate with IT 
+and cybersecurity, 
+AI centre of 
+excellence and data 
+management teams 
+to define the scope 
+of the AI project
+ –Assess the market 
+to identify and 
+shortlist suitable 
+supplier(s)
+ –Coordinate with all 
+teams to enable the 
+implementation of 
+the AI solution
+ –Support the 
+business team 
+to monitor and 
+measure relevant 
+key performance 
+indicators (KPIs)
+The guidelines include five key high-level 
+recommendations, each comprising multiple 
+considerations and text explaining the reasoning 
+and substance behind it. It is important to 
+consider the proportionality of the AI solution being 
+procured – not all guidelines may be relevant to every procurement decision, and different use 
+cases will determine the importance of each of 
+these considerations. However, following these 
+guidelines will help identify key areas needing further 
+investigation.
+Embedding guidelines in the sourcing process
+The sourcing process FIGURE 3
+Project scoping 
+and due diligenceMarket
+intelligenceSourcing
+executionEvaluation and 
+negotiationsContracting and
+implementation
+Adopting AI Responsibly: Guidelines for Procurement
+9","1. What are the teams that need to collaborate in order to ensure a holistic evaluation of the AI solution?
+2. What are the roles of the team members within these teams?
+3. What are the key considerations that need to be taken into account when adopting AI responsibly?","1. The teams that need to collaborate in order to ensure a holistic evaluation of the AI solution are procurement, business/end user, IT and cybersecurity, AI centre of excellence/data team, data management, and platform deployment and scalability assessment.
+2. The roles of the team members within these teams are assessment and prioritization of use cases, process definitions, workflow design, defining business requirements, defining expected outcomes, exception management, change management, architecture and integration design, infrastructure assessment and design, security assessment and design, application management and support, platform deployment and scalability assessment, software and licence management, AI and cognitive capability assessment, tool adaptability and configuration of needs, process modelling, service support capabilities, testing and debugging, governance, risk and compliance, user interface (UI)/user experience (UX) management, change management, AI ethics and sustainability, data needs and consumption requirements, data governance framework, data integrity requirements.
+3. The key considerations that need to be taken into account when adopting AI responsibly are proportionality of the AI solution being procured, relevance of the guidelines to the procurement decision, understanding of the AI solution, and coordination with all teams."
+9,"Sourcing process Embedding responsible AI procurement guidelines
+Project scoping and 
+due diligence –Prioritize business use case for AI deployment
+ –Define business outcome criteria and objectives
+ –Document as-is processes and current gaps that the AI solution will help solve
+ –Establish business governance prerequisites
+ –Establish risk management requirements
+Market intelligence  –Perform high-level market analysis on available AI solutions and solution providers
+ –Understand complexity of data as well as solution specifications and identify various supplier types that could help 
+achieve the business goal
+ –Qualify suppliers that would best fit requirements
+Sourcing execution
+*RFx is a term used 
+to describe a range of 
+procurement processes 
+that businesses use 
+to solicit bids from 
+suppliers. RFx can refer 
+to request for information 
+(RFI), request for 
+proposal (RFP), request 
+for quotation (RFQ) or 
+other types of requests 
+for vendor bids. –Draft scope requirements for the identified AI application
+ –Involve internal functions to identify must-have vs good-to-have functionalities and features
+ –Identify what would separate one solution from the other in each of the RFx* questionnaires
+ –Refer sample questions in the guidebook to ensure all focus areas and details are covered
+ –Execute RFx for responses from suppliers
+ –Prepare supplier evaluation matrix based on criteria across areas of consideration
+Supplier evaluation  –Perform objective evaluations through supplier scorecard-based questionnaire review
+ –Do total cost of ownership (TCO) analysis
+ –Conduct supplier risk assessment
+Contracting and 
+Implementation –Select suppliers
+ –Contract negotiations: ensure all requirements are met through various terms and conditions
+ –Consider outcome-based commercial model
+ –Draw up a detailed project implementation plan
+ –Create a plan for continuous improvement
+ –Plan for continuous retraining of algorithms
+ –Develop a framework for business governanceHow procurement teams can use AI procurement guidelines across typical 
+sourcing processesTABLE 2
+Procurement is well-positioned to weave these facets together 
+and help the C-suite define and create a holistic blueprint for the 
+organization’s AI strategy.
+Adopting AI Responsibly: Guidelines for Procurement
+10","1. What is the goal of the AI procurement guidelines?
+2. What are the prerequisites for business governance?
+3. What is the market analysis for AI solutions?
+4. What is the RFx process for soliciting bids from suppliers?
+5. What is the supplier evaluation process?
+6. What is the contracting and implementation process?","1. The goal of the AI procurement guidelines is to help businesses define and create a holistic blueprint for their AI strategy.
+2. The prerequisites for business governance are the understanding of complexity of data as well as solution specifications and the identification of various supplier types that could help achieve the business goal.
+3. The market analysis for AI solutions includes the perform high-level market analysis on available AI solutions and solution providers as well as understanding the complexity of data as well as solution specifications.
+4. The RFx process for soliciting bids from suppliers includes the drafting of scope requirements for the identified AI application, the involvement of internal functions to identify must-have vs good-to-have functionalities and features, and the identification of what would separate one solution from the other in each of the RFx questionnaires.
+5. The supplier evaluation process is objective and is conducted through supplier scorecard-based questionnaire review.
+6. The contracting and implementation process includes the selection of suppliers, contract negotiations, and the consideration of outcome-based commercial model."
+10,"The AI acquisition 
+framework
+Assess and benchmark solutions to ensure 
+your organization’s AI investment is responsible, 
+ethical and aligned to larger business goals.
+The foundation of responsible AI acquisition lies in 
+a holistic framework with ethics and sustainability 
+at the core, driving business goals, commercial 
+objectives and data strategy, all strongly supported 
+by an ongoing governance, compliance and risk 
+strategy. There are underlying interconnections 
+among these elements, nuances that should be 
+factored in during implementation. The purpose 
+of the developed framework is to ensure that 
+the acquisition of AI systems by commercial 
+enterprises is grounded in ethical principles with 
+strong governance to ensure those principles 
+are applied, thereby mitigating bias and driving 
+resilience. The AI procurement framework provides 
+comprehensive directional guidelines rather than 
+prescriptive rules, as the degree to which these 
+factors apply to an AI solution or an enterprise 
+can vary significantly. While it is sector agnostic, 
+there could be sector-specific concerns that this 
+framework is not designed to address.In the subsequent sections, this report discusses 
+in detail the impact of each of the five pillars of 
+responsible AI acquisition strategy, highlighting 
+the key considerations and questions that should 
+be raised and addressed internally (within an 
+enterprise) as well as externally (with the supplier 
+partner/solution provider) through the sourcing life 
+cycle and supplier relationship management (SRM). 
+The report also shares a set of preliminary 
+questions distilled from the comprehensive 
+assessment questionnaire (see Appendix) as a first 
+step for organizations considering an AI solution for 
+the first time. 
+While procurement can be the orchestrator driving 
+the implementation of this framework, a strong 
+partnership among the concerned functions will 
+determine its success.
+Key considerations for responsible AI acquisition FIGURE 4
+Governance, risk and compliance
+Sustainability
+Business strategyCommercial strategy
+Data strategyEthics
+Adopting AI Responsibly: Guidelines for Procurement
+11","1. What is the AI acquisition framework?
+2. What are the five pillars of the AI acquisition framework?
+3. What is the purpose of the AI acquisition framework?
+4. What are the key considerations and questions that should be raised and addressed during the AI procurement process?
+5. What are the preliminary questions distilled from the comprehensive assessment questionnaire?","1. The AI acquisition framework is a holistic framework that provides comprehensive directional guidelines for responsible AI acquisition.
+2. The five pillars of the AI acquisition framework are governance, risk and compliance, sustainability, business strategy, and commercial strategy.
+3. The purpose of the AI acquisition framework is to ensure that the acquisition of AI systems by commercial enterprises is grounded in ethical principles with strong governance to ensure those principles are applied, thereby mitigating bias and driving resilience.
+4. Key considerations for responsible AI acquisition include governance, risk and compliance, sustainability, business strategy, and commercial strategy. Organizations should raise and address questions related to these considerations during the AI procurement process.
+5. Preliminary questions distilled from the comprehensive assessment questionnaire include:
+-What are the business goals of the organization?
+-What are the commercial objectives of the organization?
+-What is the data strategy of the organization?
+-What are the ethics of the organization?
+-What are the risks of the organization?
+-What is the compliance of the organization?"
+11,"Business strategy1
+Evaluate ways AI can create a competitive 
+advantage through enhanced business 
+decision-making, leading to positive 
+changes in business outcomes.
+Adopting AI Responsibly: Guidelines for Procurement
+12","1. What are some advantages that businesses can gain through the adoption of AI? 
+2. How can AI be used to improve business decision-making? 
+3. What changes in business outcomes can be expected through the use of AI?","1. Some advantages that businesses can gain through the adoption of AI include enhanced decision-making, increased efficiency, and improved competitiveness. 
+2. AI can be used to improve business decision-making by providing insights into customer behavior, predicting trends, and optimizing operations. 
+3. Changes in business outcomes that can be expected through the use of AI include increased profits, improved customer satisfaction, and increased market share."
+12,"As the benefits of AI, from boosting speed and 
+productivity to improving forecasting and decision-
+making, become more and more visible, its use 
+cases are multiplying. However, prioritization, 
+strategic planning and evaluation will determine the 
+long-term winners in the AI game. 
+One of the key considerations in procuring an AI 
+solution is to evaluate and determine the strategic 
+fit and capabilities of the solution in terms of the 
+enterprise’s current and perceived future needs. 
+Impressed by the inherent capabilities of AI 
+solutions in the market, organizations often try to 
+force-fit the solution to meet their requirements. 
+That is one of the primary reasons AI solutions fail 
+to achieve desired business outcomes. 
+In order to find the most suitable AI solutions, 
+enterprises must define their desired business 
+goals and link them with the capabilities they want 
+to build. 
+It’s just as important to align the AI solution with the 
+organization’s technology and data strategy as AI will have a broader impact beyond the immediate 
+application area in the long run. AI centre of 
+excellence/data teams must be involved right 
+from the start while determining the scope, timeline 
+and potential organizational impact.
+Solution adaptability should be another key 
+consideration. Over time, an organization’s 
+business goals could evolve, or there could be 
+changes in the underlying technology landscape, 
+meaning the solution must adapt to new 
+requirements and continue to achieve the desired 
+outcomes. Additionally, the AI solution should 
+be able to detect and handle gradual and abrupt 
+concept drifts and incorporate the required 
+algorithm changes. The solution should also be 
+evaluated for capabilities to scale on demand with 
+minimal complexities.
+The solution provider’s thought leadership 
+and vision in the AI application domain and the 
+underlying core AI techniques can help ascertain 
+the ability to deliver on the organization’s desired 
+business goals.
+Achieving business goals: questions to ask TABLE 3
+Specifications Key considerations
+1.1   How will the AI solution deliver on 
+expected business outcomes?
+Understanding how the solution will help 
+enterprises meet their business goals. –Is the supplier able to understand your business goals and explain how their 
+capabilities will help achieve them?
+ –Are the solution’s capabilities outlined clearly, and are there demonstrated use cases 
+they can reference?
+ –How much custom development will be required for the AI solution to meet your 
+requirements?
+ –What level of guarantee does the solution provider give for the process and business 
+outcomes?
+ –Could the solution scale up to meet increased demand/productivity?
+ –If your business slows down, is the solution flexible enough to adjust to the  
+changed needs?
+1.2    Is there transparency about what the AI 
+solution can and cannot achieve?
+         Often, businesses are not fully aware of the 
+internal working mechanism of the AI model 
+being used. It is the responsibility of the 
+solution provider to educate potential buyers 
+and be transparent about the capabilities and 
+limitations of their offering. –Does the supplier explain the techniques applied in the AI system, including the use of 
+algorithms and associated software libraries for the algorithms?
+ –Is the supplier able to articulate the workings of the solution in an easy-to-understand 
+manner?
+ –Does the supplier dedicate the required resource(s) to train/educate your team about 
+the AI solution?
+ –Does the solution offer explainable results and transparency in the decision-making 
+process? 
+ –Does the supplier recognize and describe any limitations of the AI system for the 
+problem you want addressed?
+1.3    Can a non-AI solution deliver the same 
+outcomes?
+         Like any other technology, AI is not a magic 
+bullet for all problems. It is essential that 
+businesses explore alternative technology/
+solutions before deciding on an AI solution. –Can you justify why the use of AI/ML is the optimal approach to meeting the specified 
+business goals?
+ –Can any other cost-effective, non-AI technology or process be used to achieve the 
+expected business outcomes?
+Adopting AI Responsibly: Guidelines for Procurement
+13","1. What are some key considerations when procuring an AI solution?
+2. How can an organization ensure the AI solution they choose will help them achieve their desired business goals?
+3. What should be considered when evaluating an AI solution's adaptability?
+4. How can a supplier's thought leadership and vision be evaluated when considering an AI solution?","1. When procuring an AI solution, it is important to consider the strategic fit and capabilities of the solution in terms of the enterprise's current and perceived future needs. It is also important to align the AI solution with the organization's technology and data strategy.
+2. To ensure the AI solution they choose will help them achieve their desired business goals, organizations should define their desired business goals and link them with the capabilities they want to build. The AI solution should also be able to detect and handle gradual and abrupt concept drifts and incorporate the required algorithm changes.
+3. When evaluating an AI solution's adaptability, organizations should consider how the solution can scale on demand with minimal complexities. They should also evaluate the supplier's thought leadership and vision in the AI application domain and the underlying core AI techniques.
+4. When considering an AI solution, suppliers' thought leadership and vision should be evaluated in terms of their ability to deliver on the organization's desired business goals."
+13,"Specifications Key considerations
+1.4    Is there an inherent feedback loop in the 
+system to adjust to changes in the external 
+environment?
+         An AI solution can become a self-learning 
+system, provided a sufficient and appropriate 
+feedback loop is embedded into it. –Does the solution have an automatic feedback/retraining loop, or is there a human in 
+the loop?
+ –How does the solution measure business outcomes and user satisfaction? How do 
+those insights get delivered and/or feed into any product changes or updates?
+1.5    How effectively can the solution be 
+updated to accommodate change in 
+requirements?
+         AI is a highly dynamic system, so the supplier 
+should partner with the buyer to redesign 
+the solution in case business requirements 
+change. This would be applicable especially  
+if data complexity is high.
+         *A steady state is when the system is acting 
+in the intended manner, and all high-severity 
+incidents are resolved –How easy is it to adapt or customize the solution during the initial and steady state*? 
+Does the solution update its behaviour based on newly ingested data?
+ –How will the supplier help in course correction if the AI model or prediction delivers 
+unexpected results?
+ –How is the service tested and monitored for model or performance drift over time?
+ –Does the supplier provide KPIs for monitoring any performance drifts that may prompt 
+retraining of the model (if there are unexpected changes)?
+ –Does the supplier provide documentation detailing how the AI system can be 
+reconfigured or adapted if the results are not delivering the goals?
+1.6    Is the supplier a thought leader in  
+this domain?
+         All new technologies require partnerships 
+with suppliers that are thought leaders in this 
+domain as their vision will steer the solution to 
+meet future requirements. –How much does the supplier invest in R&D in the domain of their solution and 
+company requirement?
+ –How does the supplier product development stay in line with market trends?
+ –Does the supplier publish reports offering industry best practices and actionable 
+insights in terms of optimizing AI outcomes?
+ –Does the supplier organize in-person/virtual networking events for its clients to 
+increase awareness of existing AI solutions?
+ –How does the supplier solution differentiate itself from its competitors?
+ –Is the supplier investing in upskilling and training its talent pool to stay relevant with 
+state-of-the-art technology?Achieving business goals: questions to ask continued TABLE 3
+Adopting AI Responsibly: Guidelines for Procurement
+14","1.4 What is the inherent feedback loop in the system to adjust to changes in the external environment?
+1.5 How effectively can the solution be updated to accommodate change in requirements?
+1.6 Is the supplier a thought leader in this domain?","1.4 The inherent feedback loop in the system can be used to adjust to changes in the external environment.
+1.5 The solution can be updated to accommodate change in requirements, but this may depend on the data complexity.
+1.6 The supplier is a thought leader in this domain."
+14,"Commercial strategy2
+How does the AI solution align with the broader 
+commercial strategy?
+Adopting AI Responsibly: Guidelines for Procurement
+15","1. What is the AI solution?
+2. What is the broader commercial strategy?
+3. How do the AI solution and the broader commercial strategy align?","1. The AI solution is a set of guidelines for procurement.
+2. The broader commercial strategy is to adopt AI responsibly.
+3. The AI solution and the broader commercial strategy align because both aim to responsibly adopt AI."
+15,"Business strategy defines how organizations 
+want to achieve their business objectives and is 
+complemented by an accompanying commercial 
+strategy that defines how much an organization 
+would be willing to spend to achieve those goals. 
+Generating commercial benefits for the enterprise 
+is one of procurement’s key goals. In this case, 
+it means identifying the most suitable AI solution 
+with the most favourable commercial terms. These 
+terms include cost, duration, payment terms, 
+invoicing plan, discounts, rebates and investment 
+risk, among others. However, commercial strategy 
+should not be viewed solely through the lens of 
+monetary returns; rather, it should focus on the 
+value delivered for the money invested.
+As for all investments, procurement should ensure 
+that the purchased AI solution can deliver on the 
+organization’s ROI expectations. ROI should include 
+the overall value and potential benefits generated 
+for the organization. Choosing and defining the 
+most suitable KPIs – while challenging for new 
+technologies with many unknowns – is crucial for 
+continually monitoring whether the investment is 
+yielding value at all stages.The commercial considerations for an AI solution 
+should be approached with slight variations 
+compared to investing in other technology 
+solutions. The timeframe for TCO is usually three 
+to seven years for a non-AI solution. However, 
+AI is typically deployed for a longer term, so the 
+cost considerations should include a much longer 
+timeframe. Also, the ongoing cost of retraining 
+and managing concept drifts will need to be 
+considered while calculating the TCO.
+When it comes to new technologies, it is important 
+to manage uncertainties of business outcomes. 
+An effective AI system will deliver invaluable 
+outputs to any business. However, as with all new 
+technology, the learning curve and the unknowns 
+carry unforeseen risks. This makes it imperative 
+to have strong governance in place to protect 
+investment. Supplier risk assessment, performance 
+management and appropriate risk mitigation plans 
+with linked financial compensations are a few 
+factors to consider. Organizations should look to 
+include outcome-based pricing models to drive joint 
+accountability and mitigate their investment risk.
+ An effective AI 
+system will deliver 
+invaluable outputs 
+to any business. 
+However, as with 
+all new technology, 
+the learning curve 
+and the unknowns 
+carry unforeseen 
+risks.
+Adopting AI Responsibly: Guidelines for Procurement
+16","1. What are the goals of business strategy?
+2. What is the difference between commercial strategy and business strategy?
+3. What should procurement focus on when choosing an AI solution?
+4. What is the timeframe for TCO when investing in an AI solution?
+5. What are some factors to consider when calculating the TCO for an AI solution?
+6. How should uncertainties about business outcomes be managed when adopting AI?","1. The goals of business strategy are to define how organizations want to achieve their business objectives and to complement this with a commercial strategy that defines how much an organization would be willing to spend to achieve these goals.
+2. Commercial strategy is focused on the monetary returns generated by an investment, whereas business strategy should focus on the value delivered for the money invested.
+3. When choosing an AI solution, procurement should focus on ensuring that the solution can deliver on the organization's ROI expectations. This should include the overall value and potential benefits generated for the organization.
+4. The timeframe for TCO when investing in an AI solution is typically three to seven years for a non-AI solution, but AI is typically deployed for a longer term, so the cost considerations should include a much longer timeframe.
+5. In order to calculate the TCO for an AI solution, organizations should consider the ongoing cost of retraining and managing concept drifts, as well as supplier risk assessment, performance management, and appropriate risk mitigation plans.
+6. When adopting AI, uncertainties about business outcomes should be managed by implementing strong governance in place to protect investment. This includes supplier risk assessment, performance management, and appropriate risk mitigation plans."
+16,"Specifications Key considerations
+2.1    What is the expected value of the 
+solution to be delivered?
+         Commitment to business case 
+requirements will be a key ingredient  
+in a supplier partnership.
+         –In what ways is the supplier committed to achieving the business case objectives?
+ –Are there any dependencies/assumptions made by the supplier on achieving these 
+objectives?
+ –Are there ways in which the value delivered is optimized during the steady state*?
+ –Will the solution require any co-development/co-innovation? How will you benefit from the 
+potential gains of the supplier in case of co-innovation?
+2.2    Do you understand all the costs 
+involved in the purchase and 
+maintenance of the AI system?
+         Determining the viability of an AI solution 
+for a longer or shorter term can be done 
+by calculating the TCO, which includes all 
+direct and indirect costs throughout the 
+lifetime of the solution – from acquiring, 
+building, running to retiring.
+          *Much of the cost of AI projects is 
+internal; the process of getting data 
+ready to enable an AI solution is time-
+consuming and expensive.  –Can the supplier provide a breakdown of one-time costs based on project milestones/
+measurable deliverables?
+ –Has the supplier provided a resource-wise effort estimation required for each of these 
+milestones?
+ –Are the recurring cost components clearly defined? Is there clarity on the frequency of the 
+recurring costs?
+ –What would be the cost of changes required in the existing systems/infrastructure?*
+ –Has the supplier provided the hourly/daily rates of consulting/technical resources to be 
+involved in the project?
+ –What are the relevant skills/years of experience in the AI domain of the resources the 
+supplier plans to deploy?
+ –Does the supplier offer different pricing options to accommodate the gradual expansion of 
+the AI system deployment in the client environment?
+ –What are the discounts/rebates offered by the supplier?
+2.3    How can organizations mitigate the 
+investment risks of the solution?
+         There are multiple unknowns when 
+organizations invest in new technologies 
+and the team should evaluate possibilities 
+to mitigate investment risks. –Is the supplier able to delink the discovery and execution phases to restrict upfront 
+investment while the business case is being tested?
+ –Can the solution/implementation be in phases and gradually widened to avoid large 
+upfront costs? For e.g. implementation of a low-cost model or proof of concept before 
+full-scale implementation?
+ –Is the supplier able to commit to an outcome-based pricing model? What would be the 
+KPIs that can be linked to outcomes?
+ –Is the supplier financially solvent?
+ –Is the supplier currently going through or has planned for an acquisition/merger?
+ –Who will own the AI model in the event of insolvency or ownership transfer? (e.g. code 
+escrow, data escrow, model escrow)Meeting commercial targets: questions to ask TABLE 4
+Adopting AI Responsibly: Guidelines for Procurement
+17","1. What is the expected value of the solution to be delivered?
+2. What are the costs involved in the purchase and maintenance of the AI system?
+3. How can organizations mitigate the investment risks of the solution?
+4. What would be the cost of changes required in the existing systems/infrastructure?
+5. What are the relevant skills/years of experience in the AI domain of the resources the supplier plans to deploy?
+6. What are the discounts/rebates offered by the supplier?","1. The expected value of the solution to be delivered is important to consider when making a decision to invest in an AI system. The supplier should be able to commit to business case requirements in order to establish a partnership.
+2. The costs involved in the purchase and maintenance of the AI system should be considered when making a decision to invest in an AI system. The supplier should be able to provide a breakdown of one-time costs based on project milestones/measurable deliverables.
+3. Organizations should mitigate the investment risks of the solution by evaluating possibilities such as delinking the discovery and execution phases, implementing the solution in phases, or committing to an outcome-based pricing model.
+4. The cost of changes required in the existing systems/infrastructure should be considered when making a decision to invest in an AI system.
+5. The supplier should be able to commit to relevant skills/years of experience in the AI domain of the resources they plan to deploy.
+6. The discounts/rebates offered by the supplier should be considered when making a decision to invest in an AI system."
+17,"Data strategy3
+Evaluate the effectiveness of the AI solution in 
+terms of analysing valuable data in support of 
+enterprise objectives.
+Adopting AI Responsibly: Guidelines for Procurement
+18","1. What are the benefits of adopting AI responsibly?
+2. What are the guidelines for procurement of AI solutions?
+3. How effective is the AI solution in terms of analysing valuable data?","1. The benefits of adopting AI responsibly include improved decision-making, increased efficiency, and reduced costs.
+2. The guidelines for procurement of AI solutions include understanding the business need, assessing the risks and benefits, and defining performance requirements.
+3. The effectiveness of the AI solution in terms of analysing valuable data depends on the quality of the data and the accuracy of the AI algorithm."
+18,"Analysing data and learning from it is the 
+fundamental job of any AI solution, so providing 
+relevant data is an important first step. A robust data 
+strategy serves as the foundation for any successful 
+AI deployment. 
+Organizations will have to prepare the input dataset 
+for the AI solution, and the costs associated with this 
+will be different. For instance, the cost will be higher 
+for those with data swamps rather than data lakes.2 
+Next comes the question of data relevance. Even 
+if the data is available, is it the right data? Will it be 
+sufficient to generate an exhaustive list of use cases 
+for the purpose and scope of the AI solution? How 
+can this data be accessed? The project business 
+and central data management teams will have to 
+work jointly to arrive at these answers. If the internal 
+data available is insufficient for training, and the data 
+acquisition costs are high, then generating synthetic 
+data from the available internal dataset or going to the market for synthetic data sources may be the 
+next best approach.3
+In parallel, organizations should start thinking about 
+their future data strategy as they will have to 
+manage the evolving requirements that arise from 
+AI implementation. They should explore potentially 
+suitable data platform(s), build a scalable data 
+pipeline, establish a centralized data governance 
+mechanism to act as a support function and 
+enable smaller teams to execute a top-down data 
+strategy, devising policies and procedures for 
+effective data management and adherence to legal 
+and regulatory requirements.
+Organizations can also consider making use of 
+business opportunities from the data they collect. 
+How can additional benefits be derived from data 
+being traded back to the market/ecosystem in terms 
+of negotiating better contract terms with AI suppliers 
+or generating additional revenue streams? 
+Driving data for success: questions to ask TABLE 5
+Specifications Key considerations
+3.1    Do you have a clear and 
+defined as-is and to-be  
+data strategy?
+To maximize business value 
+from implementation of the AI 
+solution, organizations need to 
+assess, identify gaps and adopt 
+a long-term data strategy. –What type of data platform does your organization currently have in place? How will the new AI 
+implementation impact your existing data platform?
+ –What is the enterprise data structure strategy if you are planning to migrate to the cloud and use 
+cloud-based AI capabilities? What data will go on the cloud? Are you looking at single or multi-
+cloud providers? Do you want to prioritize modularity or flexibility?
+ –Is there an existing data culture across the organization?
+ –Is senior leadership involved in establishing and communicating data strategies? 
+ –How are different parts of the organization incentivized to share and reuse data? Are employees 
+being trained in data quality management?
+ –Does the data-based feedback need to be looped back into business decisions and how?
+ –Is there a designated team for data collection, validation, storage, governance, security and 
+accountability structures across the entire data supply chain? 
+ –Who is responsible for ethical data use in the enterprise?
+3.2    What are the different sources 
+of data to be considered?
+For organization-specific 
+contextual learning process, 
+internally available data is 
+ideal. Otherwise, external 
+sources of data (synthetic 
+data) can be considered. –What are the different kinds of data expected to be ingested by the AI solution?
+ –Can the AI solution meet existing and new enterprise objectives based on internally available data?
+ –Do you know where and how to collect the data internally? Is the available internal data ready to be 
+consumed – is it accurate, complete, consistent and up to date? 
+ –Will external sources of data be needed? What is the cost of acquiring/generating synthetic data?
+ –Can the external data provider ensure complete, relevant, unbiased and timely data? Who is 
+responsible for ensuring the quality, usability and reliability of third-party data?
+ –Should there be different contractual provisions for the exchange of different categories of internal 
+data and related data models outside your organization? For example, you may want to limit/
+encrypt sharing of data/data models built on personal identifiable information (PII)-related data.
+ –Is the collection of additional data necessary in the future for optimal AI performance?
+3.3    Does the supplier 
+have satisfactory data 
+management practices?
+The data for the AI model should 
+meet data quality standards 
+defined by the governance team. 
+Furthermore, data ownership 
+and management, right from 
+storage to extraction, need to 
+be efficient, secure and adhere 
+to regulatory requirements. –Does the supplier have adequate data quality assurance processes and frameworks around 
+storage, management and transfer of data?
+ –Who will have the ownership and be accountable for the data and derivative models?
+ –Does the supplier have the standard data privacy/security frameworks for its industry?
+ –How will the supplier follow data privacy practices for sensitive data that falls outside of the General 
+Data Protection Regulation (GDPR)?
+ –Where is the data collected for the AI model stored? What are the security measures to prevent a 
+data breach?
+ –Who has access to the stored data? Elaborate on the liability in case of data breach.
+Adopting AI Responsibly: Guidelines for Procurement
+19","1. What is a data swamp?
+2. What is the difference between data lakes and data swamps?
+3. What are some key considerations when planning a data strategy for AI?
+4. What is the best way to generate synthetic data?
+5. What are some things to consider when negotiating data sharing agreements with AI suppliers?
+6. What are some things to consider when establishing data governance structures?","1. A data swamp is a large volume of data that is difficult to process and use.
+2. Data lakes are repositories for data that are easy to access and use. Data swamps are difficult to process and use.
+3. When planning a data strategy for AI, some key considerations are the relevance of the data, the costs of acquiring and processing the data, and the data governance structures needed to manage the data.
+4. The best way to generate synthetic data is to extract data from the available internal dataset or to go to the market for synthetic data sources.
+5. When negotiating data sharing agreements with AI suppliers, some things to consider are the type of data to be shared, the costs of acquiring and processing the data, and the data governance structures needed to manage the data.
+6. When establishing data governance structures, some things to consider are the ownership and management of the data, the data quality standards, and the data privacy and security frameworks."
+19,"Ethics and 
+sustainability4
+Evaluate if the AI solution creates a net 
+positive impact from an ethical and 
+sustainability perspective.
+Adopting AI Responsibly: Guidelines for Procurement
+20","1. What are the guidelines for procurement of AI?
+2. How can AI be adopted responsibly?
+3. What is the impact of AI from an ethical and sustainability perspective?","1. The guidelines for procurement of AI are to ensure that AI is adopted responsibly.
+2. To ensure that AI is adopted responsibly, the guidelines recommend that organizations consider the following:
+a. The potential impact of AI on individuals, society, and the environment
+b. The ethical and social implications of AI
+c. The impact of AI on human rights
+d. The impact of AI on privacy
+e. The impact of AI on equality and diversity
+f. The impact of AI on the future of work
+g. The impact of AI on the economy
+3. The impact of AI from an ethical and sustainability perspective can be both positive and negative."
+20,"A responsible AI system upholds ethical 
+standards of fairness, transparency, inclusivity 
+and accountability while being environmentally 
+sustainable and balancing profit with social 
+responsibility. 
+The best way to ensure that your organization 
+invests in a responsible AI solution is by having 
+dedicated internal stakeholders take responsibility 
+and accountability for various facets of the AI 
+implementation process. For instance, the chief 
+analytics officer or chief data officer could oversee 
+data governance, providing AI-focused training 
+to staff and collaborating closely with third-party 
+providers of data, AI services and software. A 
+dedicated team or function could oversee project 
+direction and change management; another team 
+could oversee the execution, solution adoption and 
+performance tracking.However, certain pitfalls (such as bias and coding of 
+unethical standards into the system) can corrupt the 
+AI solution. Designers could unknowingly introduce 
+bias into the model, or biases may enter the 
+system through a training data set or during training 
+interaction with end users. Hence, eliminating 
+bias should be one of the top priorities during the 
+selection and deployment of an AI system. The 
+solution provider should have sufficient checks 
+and balances within the system to eliminate or 
+minimize potential biases and ethical issues from 
+the outcomes. It’s also important for the supplier’s 
+development team to be aware and consciously 
+adopt an ethical mindset while designing and 
+building the system. An ideal partner will have 
+a mitigation plan in case the AI solution starts 
+producing biased outcomes. Conversely, these 
+biased outcomes can be pre-empted if the supplier 
+prioritizes diversity and inclusivity within the team 
+from the initial stages.
+Seven core values for ethical AI TABLE 6
+    Common good: The purpose 
+of AI solutions should be to 
+accelerate the development of 
+society and improve quality of life 
+of all people.    Accountability: All stakeholders 
+involved in the development and 
+deployment of the AI solution 
+should be compliant with 
+standards and legislations, and 
+accountable for the outcomes and 
+impacts of the solution. 
+    Inclusiveness:  Ensuring that 
+the members of AI design teams 
+themselves are diverse and 
+inclusive will help proactively 
+address biases as well as increase 
+the trust external stakeholders 
+place in the solution provider.    Non-maleficence: All 
+stakeholders should ensure that 
+AI does not put humans at risk 
+of harm, either in the intended 
+or unintended outcomes of its 
+use, and that it is not used for 
+nefarious purposes.
+    Accessibility: AI technology 
+and the knowledge on its 
+development, deployment and use 
+should be made widely accessible 
+so that individuals can develop the 
+ability to use AI technology and 
+understand the potential it brings.    Transparency: The decision-
+making process of the AI 
+algorithm should be easily 
+explainable, and developers 
+should be transparent about 
+its purpose and intentions to 
+promote fairness and equity.
+    Equitability: AI solution 
+designers should keep in mind 
+equitable outcomes for all – 
+from vulnerable communities 
+to people with disabilities.
+Sources: World Economic Forum, Quantum Computing Governance Principles, 2022; World Economic Forum, A Blueprint for 
+Equity and Inclusion in Artificial Intelligence, 2022.
+Emerging ethical risks such as misinformation (e.g. 
+deepfakes), over-reliance and loss of skills, which 
+already exist in some sectors today, could now 
+affect many services in the supply chain because of 
+the extensive use of AI. For example, AI-powered 
+chatbots in customer service can lead to over-
+reliance on AI, no human involvement and a lack of 
+empathy in the redressal of complaints, which can 
+reduce customer satisfaction. Mitigation measures 
+for such risks need to be addressed with suppliers 
+during due diligence and should be embedded in 
+commercial clauses. 
+Sustainability metrics are just as important when 
+evaluating an AI solution. In its current form, AI is 
+not a sustainable solution. Sustainability in AI would 
+mean developing AI systems that are compatible 
+with sustaining environmental resources for the 
+present and future generations. A responsible AI provider should have a clear road map to mitigate 
+the environmental impact (such as a high level 
+of energy consumption and resource depletion) 
+caused by the technology.
+Enterprises – the buyers of AI solutions – must also 
+have processes in place to encourage the adoption 
+of a responsible AI solution. Employees within the 
+buyer organizations must have the right incentives 
+and be recognized for doing the right (sustainable) 
+thing. Companies should have a vetting process 
+as part of their AI system’s pre-implementation 
+review to ensure that ethical and sustainable 
+considerations have been addressed. Also, an 
+organizational framework should be developed that 
+maps the roles and responsibilities of each team 
+involved and an escalation procedure in case of 
+questionable actions. Companies 
+should have a 
+vetting process 
+as part of their 
+AI system’s pre-
+implementation 
+review to ensure 
+ethical and 
+sustainable 
+considerations 
+have been 
+addressed.
+Adopting AI Responsibly: Guidelines for Procurement
+21","1. What are the seven core values for ethical AI?
+2. What are some of the risks associated with AI implementation?
+3. What should be done to encourage the adoption of a responsible AI solution?
+4. How can enterprises ensure that their AI implementations are responsible?","1. The seven core values for ethical AI are common good, accountability, inclusiveness, non-maleficence, accessibility, transparency, and equitability.
+2. Some of the risks associated with AI implementation include misinformation, over-reliance and loss of skills, and environmental impact.
+3. Enterprises can encourage the adoption of a responsible AI solution by having a vetting process as part of their AI system’s pre-implementation review, developing an organizational framework that maps the roles and responsibilities of each team involved, and having an escalation procedure in case of questionable actions.
+4. Enterprises can ensure that their AI implementations are responsible by adopting sustainability metrics, encouraging employee involvement, and having a clear road map to mitigate the environmental impact caused by the technology."
+21,"Building an ethical and sustainable future: questions to ask TABLE 7
+Specifications Key considerations
+4.1   Describe the approach to eliminate or 
+minimize bias and ethical prejudices from 
+the AI solution.
+Understanding how the supplier and the 
+solution will mitigate any potential bias in  
+the outcomes.
+* Equalized odds and disparate impact  
+are metrics used to measure fairness in  
+ML algorithms
+** Zip code or postal code is a common  
+proxy variable for socioeconomic status,  
+which can introduce biases in the prediction  
+of certain outcomes
+*** Consequences scanning is a process 
+that deliberately inserts friction into the 
+product development process with the goal 
+of identifying and mitigating negative or 
+unintended consequences –What methods are used to train the AI model? Do the training methods introduce 
+fairness (eliminating biases like gender, age, ethnicity, region), interpretability, privacy 
+and security into the model? 
+ –What data is the supplier using to train the AI solution? Where is the data being 
+sourced from and are there multiple data sources? Has the supplier trained the model 
+on representative and complete data sets? How can you test for bias in training data?
+ –Does the model come with a set of model cards clearly describing the nature of the 
+model and its training data?
+ –Does the supplier use any open-source ethical tooling to assess the bias factor?
+ –Can the supplier identify possible sources of bias or unfairness and where they come 
+from – whether it’s data or techniques implemented or other sources?
+ –Is a conscious effort being made to implement checks and balances in the AI  
+to prevent biases from creeping in? 
+ –Does the supplier use any metrics (e.g. equalized odds or disparate impact*) to 
+evaluate bias in AI?
+ –Has the supplier monitored for any proxy variables that could lead to biased 
+predictions? (e.g. postal code data**)
+ –Has the supplier published any white papers or technical reviews to evidence the 
+technical robustness and unbiased outcomes of its model’s predictions? 
+ –Does the supplier use any design ethics techniques? (e.g. consequences scanning***)
+ –Would the supplier be willing to participate in these exercises/procedures hosted  
+by you? 
+ –Does your solution address new ethical risks such as misinformation, over-reliance 
+and loss of skills?
+4.2   Describe the process for ensuring that  
+the solution development team adopts an 
+ethical mindset.
+The development team must be aware and 
+responsible while designing ethical standards 
+for their AI solution. –Does the AI and ML team take responsibility for how their work will be used?
+ –What are the ethical standards encoded into the AI solution?
+ –Does the supplier offer training or have an awareness programme to ensure its team 
+understands the potential impact of creating an AI system that produces an incorrect 
+or disproportional output? If not, would the supplier be open to AI ethics training 
+offered by your organization?
+ –Have there been any instances in the past when the AI has not met performance 
+requirements and delivered unintended results? What were the corrective measures 
+taken for better outcomes?
+ –Is there any redressal mechanism if individuals are affected negatively?
+ –Does the supplier consider user accessibility needs during design thinking? For 
+example, many facial recognition technology (FRT) cameras are ineffective for 
+individuals using wheelchairs as they cannot be lowered to an appropriate height.
+Adopting AI Responsibly: Guidelines for Procurement
+22","1. What are some key considerations when assessing the ethical and sustainable nature of an AI solution?
+2. How can you tell if an AI supplier is taking steps to mitigate bias in their solution?
+3. What are some things to look for when assessing the development team's mindset with regards to ethics?
+4. What are some consequences of implementing an AI solution without taking into account ethical considerations?","1. Key considerations when assessing the ethical and sustainable nature of an AI solution include understanding how the supplier and the solution will mitigate any potential bias in the outcomes, and whether the model comes with a set of model cards clearly describing the nature of the model and its training data.
+2. You can tell if an AI supplier is taking steps to mitigate bias in their solution by looking at whether they use any metrics (e.g. equalized odds or disparate impact*) to evaluate bias in AI, and whether they have monitored for any proxy variables that could lead to biased predictions.
+3. To assess the development team's mindset with regards to ethics, you should look for things such as whether they take responsibility for how their work will be used, and whether they have an awareness programme to ensure its team understands the potential impact of creating an AI system that produces an incorrect or disproportional output.
+4. Consequences of implementing an AI solution without taking into account ethical considerations can include things such as misinformation, over-reliance and loss of skills."
+22,"Specifications Key considerations
+4.3   How is the supplier’s approach toward 
+ethics at an organizational level?
+Diving deeper to understand how the supplier 
+organization looks at ethics and sustainability. –Does the supplier’s code of conduct (or equivalent) specifically highlight the ethical 
+use of digital technology, including AI ethics?
+ –Does the supplier employ a chief AI ethics officer? What is their expertise and 
+experience in this space?
+ –Has the supplier’s senior leadership endorsed AI ethics? Are there public statements 
+or other evidence to demonstrate the supplier’s engagement with ethics? 
+ –Does the supplier have an AI ethics ambassador network? 
+ –Did diverse teams build the AI system? Does the supplier have a policy on inclusivity 
+or diversity, equity and inclusion goals?
+ –Does the supplier use an AI ethics impact assessment? If not, can they provide 
+relevant information so your organization can complete its assessment? 
+ –Does the supplier have an AI ethics board? Does it have the enforcement power to 
+prevent the engineering of AI systems that are inconsistent with its organizational 
+values? 
+ –Does the supplier have a whistle-blower protection policy?  
+ –Does the supplier work with law enforcement and/or military agencies? What type of 
+AI is being supplied to these organizations? For instance, providing a biased facial 
+recognition system for policing can create problems.
+ –Does the supplier provide responsible use guidelines? Does the supplier have a 
+glossary of terms for ethics?
+4.4   Is the supplier concerned about the 
+environmental impact caused by its AI 
+solutions? What steps are being taken  
+to mitigate the impact?
+Evaluate whether the solution provider  
+has a clear road map in place to mitigate  
+the environmental impact caused by the  
+AI technology. –What is the supplier’s monthly (average) energy consumption (kWh)?
+ –How much energy (kWh) is spent every month by the supplier for training its  
+AI solutions?
+ –What are the measures or techniques the supplier has adopted to optimize its overall 
+energy consumption?
+ –Does the supplier have a road map to become energy efficient in the next three to  
+five years? 
+ –What are the hardware systems the supplier uses to power its AI solution? Is the 
+hardware infrastructure optimized to reduce energy consumption?
+ –Does the supplier use renewable energy sources to meet its energy requirement 
+for training the AI solution? If yes, what’s the breakup of the percentage of energy 
+derived from different energy sources?
+ –Has the supplier considered possible environmental harm during data collection?  
+For example, collection and processing of large amounts of data can require 
+significant amounts of energy, particularly if the data is stored in data centres or on 
+cloud servers.Building an ethical and sustainable future: questions to ask continued TABLE 7
+Adopting AI Responsibly: Guidelines for Procurement
+23","1. What are the key considerations when assessing a supplier's approach to ethics at an organizational level?
+2. What are some questions you can ask to determine if a supplier is concerned about the environmental impact of its AI solutions?
+3. What are some measures a supplier can take to reduce the environmental impact of its AI solutions?","1. Key considerations when assessing a supplier's approach to ethics at an organizational level include whether the supplier has a code of conduct that specifically highlights the ethical use of digital technology, whether the supplier employs a chief AI ethics officer, and whether the supplier's senior leadership has endorsed AI ethics.
+2. Questions you can ask to determine if a supplier is concerned about the environmental impact of its AI solutions include how much energy the supplier spends every month on training its AI solutions and whether the supplier has a road map to become energy efficient in the next three to five years.
+3. Measures a supplier can take to reduce the environmental impact of its AI solutions include optimizing energy consumption, using renewable energy sources, and considering environmental harm during data collection."
+23,"Governance, risk  
+and compliance5
+Build and integrate risk management plans with 
+the AI solution and improve business resilience, 
+especially to AI-related cyber risks.
+Adopting AI Responsibly: Guidelines for Procurement
+24","1. What are the benefits of integrating risk management plans with AI solutions?
+2. What are some of the potential risks associated with AI?
+3. What are some of the guidelines for responsible procurement of AI?","1. The benefits of integrating risk management plans with AI solutions include improved business resilience to AI-related cyber risks.
+2. Potential risks associated with AI include data privacy and security risks, algorithmic bias and discrimination, and unintended consequences of AI applications.
+3. Guidelines for responsible procurement of AI include assessing the risks and benefits of AI, understanding the capabilities and limitations of AI, and establishing accountability and governance structures for AI."
+24,"While AI can deliver an incredible increase in 
+benefits, the consequence of its errors can be just 
+as huge. Every industry faces a different kind of risk 
+based on target data collection points, regions, data 
+safety and legal compliance, among other things.
+Data sourcing is one of the key focus areas to 
+manage the risk associated with deploying an AI 
+solution. Today, enterprises have a vast volume of 
+data to exploit, but this comes with issues such 
+as data privacy and geopolitical and cybersecurity 
+risks. Data breaches can destroy business 
+reputation, lead to legal actions and result in huge 
+loss of revenue. The average cost of a data breach 
+in the US has almost doubled over the last 10 years 
+jumping from $5.4 million in 2013 to $9.4 million 
+in 2022.4 Another damaging risk related to data is 
+bias in algorithms. The AI model learns from the 
+dataset it is trained on, and bias in the dataset can 
+result in undesirable outputs. 
+Cyberattacks are another significant risk. These 
+have the potential to impact the integrity of the AI 
+model’s decisions and predictions; hackers can 
+take control of the solution or deliver manipulated 
+and/or malicious inputs that result in the poisoning 
+of the AI algorithm.
+Used incorrectly or negligently, AI can leave an 
+organization exposed to operational, financial, 
+regulatory and reputational hazards. Safeguards 
+must be put in place to ensure that the AI solution 
+functions as intended, and this calls for a strong governance system designed with AI’s unique 
+characteristics and capabilities in mind.
+AI governance is the process of setting policies 
+and establishing accountability to drive the 
+development and deployment of AI systems in 
+an organization. It’s a broad framework that uses 
+a variety of processes, approaches and tools to 
+ensure that an organization uses AI technology 
+favourably and responsibly. AI governance 
+encompasses risk management, regularity 
+compliance, contractual agreements and ethics. 
+When done properly, AI governance fosters agility 
+and trust in an organization.
+Capturing and managing metadata on AI models 
+creates transparency into how AI systems are 
+built and deployed, which is a critical prerequisite 
+for most regulatory concerns. Many tools and 
+calibrated assessments are available in the market 
+that can help assess the impact of an AI system, 
+areas of risk and performance. Many of these 
+tools have been developed with academia and 
+governments to encourage transparency in model 
+reporting and drive assurance that the AI systems 
+are aligned with existing and emerging regulations 
+and standards. 
+These assessment tools can help enterprises create 
+consistent and well-defined practices that prioritize 
+attributes such as accuracy, bias, consistency, 
+transparency, interpretability and fairness in the AI 
+model being developed.
+Managing governance, risk and compliance: questions to ask TABLE 8
+Specifications Key considerations
+5.1    What is the target demographic for data collection for 
+the model?
+As AI modelling depends on data, it is imperative 
+to consider the impact of data use on the 
+target, especially in terms of privacy, consent 
+and regulations related to individuals. –Is the data being collected from vulnerable demographic groups of the 
+target countries?
+ –If personal data is being used, is it being collected in compliance with the 
+data protection and privacy laws of the country (GDPR, Health Insurance 
+Portability and Accountability Act (HIPAA), regional laws etc.)?
+ –Does the supplier have the informed consent of the individuals whose 
+data has been collected, i.e. have the individuals been provided all the 
+necessary information?
+ –Can individuals withdraw their consent to the data collected? If so, will the 
+collected data be withdrawn from the AI model?
+ –What are the relevant PII categories for the data collection process?
+ –Is the content moderated? (e.g. for sexuality/violence)
+5.2    How has the supplier accounted for managing 
+cybersecurity risks?
+An important concern to be addressed early on is 
+cybersecurity failures, given its potential to have a  
+serious impact on the output of the AI solution. –What are the proactive measures the supplier has taken to detect and 
+tackle cyberattacks?
+ –How does the supplier minimize the effect of an attack?
+ –Does the supplier actively perform vulnerability management to address 
+common and frequent threats?
+Adopting AI Responsibly: Guidelines for Procurement
+25","1. What are the different risks associated with deploying AI solutions?
+2. What is data sourcing and why is it important when deploying an AI solution?
+3. What is bias in algorithms and why is it a risk?
+4. What is cybercrime and why is it a risk to AI solutions?
+5. What is the importance of capturing and managing metadata on AI models?
+6. What are some of the tools and calibrated assessments available to help manage AI risk?
+7. What is AI governance and why is it important?
+8. How can enterprises create consistent and well-defined practices around AI?","1. There are a variety of risks associated with deploying AI solutions, including operational, financial, regulatory, and reputational risks.
+2. Data sourcing is important when deploying an AI solution because the data an AI model learns from can introduce bias into the algorithm.
+3. Bias in algorithms is a risk because it can lead to undesirable outputs.
+4. Cybercrime is a risk to AI solutions because hackers can take control of the solution or deliver manipulated and/or malicious inputs that result in the poisoning of the AI algorithm.
+5. Capturing and managing metadata on AI models is important because it creates transparency into how AI systems are built and deployed.
+6. There are a variety of tools and calibrated assessments available to help manage AI risk, including risk management tools, regularity compliance tools, contractual agreement tools, and ethics tools.
+7. AI governance is important because it establishes policies and accountability to drive the development and deployment of AI systems in an organization.
+8. Enterprises can create consistent and well-defined practices around AI by using assessment tools that prioritize attributes such as accuracy, bias, consistency, transparency, interpretability, and fairness in the AI model being developed."
+25,"Specifications Key considerations
+5.3    Has the supplier reviewed the potential geopolitical 
+risks that arise from operating in different physical 
+locations?
+For a company looking to embed a disruptive technology 
+like AI into its systems, the impact of geopolitics must  
+be considered. –Has the supplier accounted for the geopolitical risks associated with 
+collecting data from certain disputed territories?
+ –Have the risks of storing or processing data in unstable regions been 
+considered?
+ –Will AI pose any risk if used in such territories? e.g. can it heighten 
+instability in regional politics, affect peace and security?
+ –Are data collectors at any physical risk during the process of data 
+collection?
+5.4    Have the risks related to the project been defined 
+clearly?
+Due to the uncertainty of AI/ML work, an experienced AI 
+modelling supplier is expected to identify possible risks 
+and ways to mitigate them. –Is the scope for the AI defined clearly in terms of deliverables/outcomes to 
+be achieved? 
+ –How does the supplier manage unsupported content types?
+ –How does the supplier define hard performance metrics with AI?
+ –To what extent is the AI solution reproducible? 
+ –Will the AI model be covered by intellectual property policy? Who has legal 
+ownership of source data, models and resell rights?
+5.5    Is the supplier compliant with rules and regulations 
+associated with building an AI model?
+AI offers great value to businesses, but it comes with 
+a strategic risk for all stakeholders. Governments and 
+institutions are actively taking measures to prevent the 
+misuse of the technology and to build trust in AI tools.
+* The AI explainability statement is a public document 
+released by an AI organization that outlines how its AI 
+algorithms work, its intended use, technology infrastructure, 
+model accuracy, bias detection and mitigation, system 
+maintenance, risk management, ethical principles, and data 
+sources.
+** The EU AI Act establishes a horizontal set of rules for 
+developing and using AI-driven products, services and 
+systems within the EU using a risk-based approach of 
+evaluating each AI system. The NYC Law on Automated 
+Employment Decision Tools states that an automated hiring 
+system used on or after 1 January 2023 must undergo 
+a bias audit consisting of evaluation by an independent 
+auditor, including testing to assess disparate impact to 
+certain groups. –Has the supplier proactively prepared to ensure compliance with 
+regulations? Does the supplier provide an explainability statement* 
+outlining the critical dimensions of the AI solution?
+ –Does the supplier comply with data-related regulations such as General 
+Data Protection Regulation (GDPR), California Consumer Privacy Act 
+(CCPA), Health Insurance Portability and Accountability Act (HIPAA), 
+Children’s Online Privacy Protection Act (COPPA) to name a few?
+ –Is the model compatible with emerging algorithmic compliance 
+regulations, e.g. the EU AI Act5 and the NYC Law on Automated 
+Employment Decision Tools6 (effective July 5, 2023)**? 
+5.6    How does the supplier prepare for audits and 
+compliance requirements?
+A risk management process that captures the policies, 
+processes, procedures and practices across the 
+organization involved in the development, testing, 
+deployment, use and auditing of AI systems should  
+be in place. It must be implemented effectively as well  
+as be transparent. –Does the supplier conduct mandatory conformity assessments? At what 
+frequency? 
+ –Has the supplier clearly defined the systems in place for internal audits? 
+What are the audit artifacts that it can share with you?
+ –How does the supplier ensure that compliance is met on its side as well 
+as the buyer’s side after implementation of the AI model?
+ –If access to legal support is limited (in case of a smaller buyer), how can 
+the supplier assist you in ensuring compliance?
+ –Has the AI model been assessed for its performance with algorithm 
+assessment tools, model cards etc., to prevent biases and undesirable 
+outputs?
+5.7    Is the supplier implementing international standards 
+and certifications in the model?
+Standards and certifications can form a part of the  
+initial guiding principles of governance to help AI 
+developers and its users in their journey to build a 
+responsible AI model. –Does the supplier follow any AI governance standards set by 
+international standard bodies (such as the International Organization 
+for Standardization (ISO) and the Institute of Electrical and Electronics 
+Engineers Standards Association (IEEE) and others) to ensure that best 
+practices are being followed?
+ –Will the AI system be accredited by any recognized institute that provides  
+a calibrated conformity assessment of the model?Managing governance, risk and compliance: questions to ask continued TABLE 8
+Adopting AI Responsibly: Guidelines for Procurement
+26","1. What are the key considerations when assessing a supplier for an AI project?
+2. What are the risks associated with using AI?
+3. What are the compliance requirements for using AI?
+4. How does the supplier prepare for audits and compliance requirements?
+5. What standards and certifications does the supplier follow for AI projects?","1. Key considerations when assessing a supplier for an AI project include understanding the supplier's experience with AI/ML, assessing the risks associated with using AI, and understanding the compliance requirements for using AI.
+2. The risks associated with using AI include the uncertainty of AI/ML work, the potential for misuse of the technology, and the risk of data breaches.
+3. Compliance requirements for using AI vary depending on the jurisdiction, but may include regulations related to data protection, data security, and AI governance standards.
+4. The supplier prepares for audits and compliance requirements by implementing a risk management process that captures the policies, processes, procedures, and practices across the organization involved in the development, testing, deployment, use, and auditing of AI systems.
+5. The supplier follows AI governance standards set by international standard bodies, and the AI system is accredited by a recognized institute that provides a calibrated conformity assessment of the model."
+26,"Managing governance, risk and compliance: questions to ask continued TABLE 8
+Specifications Key considerations
+5.8    What are the organizational practices recommended 
+by the supplier?
+Organizations should establish practices that can 
+characterize the AI model specifications paying 
+special attention to attributes such as accuracy, bias, 
+consistency, transparency, interpretability and fairness. –Is the risk-based approach developed by the supplier based on the AI 
+model and the industry in which it is being implemented?
+ –Has the supplier conducted an AI impact assessment of the buyer 
+organization at an early stage of the procurement process?
+5.9    Do the contractual agreements include all 
+compliance-related factors?
+A good agreement will not only involve basic contractual 
+terms and project management details but also have 
+protective measures against non-compliance.
+* RAII is a non-profit organization offering certification 
+programmes that align with AI laws, regulations, principles, 
+research and practitioner insights. –Can the supplier develop capacity in the form of new contract 
+requirements?
+ –Is there a supplier compliance statement (e.g. Responsible Artificial 
+Intelligence Institute (RAII) certification*) that organizations can include in 
+their master service agreements?
+ –Are there contractual agreements surrounding restricted use or prohibited 
+forms of use?
+ –Has the buyer developed well-defined KPIs and compliance metrics to 
+track performance during the AI life cycle?
+ –Does the supplier offer support beyond contractual agreements to assist 
+in governance, maintenance and change management?
+Adopting AI Responsibly: Guidelines for Procurement
+27","1. What organizational practices are recommended by the supplier?
+2. What contractual agreements should be in place?
+3. What compliance-related factors should be considered?
+4. What are the supplier's capabilities?
+5. How can the buyer ensure performance is tracked?","1. The supplier recommends that organizations establish practices that can characterize the AI model specifications, paying special attention to accuracy, bias, consistency, transparency, interpretability and fairness.
+2. Contractual agreements should include all compliance-related factors and protective measures against non-compliance.
+3. Compliance-related factors to consider include the risk-based approach developed by the supplier, the buyer's industry, and conducting an AI impact assessment.
+4. The supplier's capabilities include developing capacity in the form of new contract requirements, offering support beyond contractual agreements, and having a supplier compliance statement.
+5. The buyer can ensure performance is tracked by developing well-defined KPIs and compliance metrics."
+27,"Conclusion
+The history of AI in enterprises dates back to 
+the early days of computing when rule-based 
+systems and expert systems were used to perform 
+specific tasks, such as analysing data and making 
+predictions. However, these systems were limited in 
+their capabilities and required significant amounts of 
+human input to function effectively.
+The growth of AI has been exponential in the 
+past decade, and AI technology is now achieving 
+goals that seemed very distant just a few years 
+ago. Organizations worldwide are increasingly 
+adopting AI and ML to support business growth, 
+improve efficiency and gain a competitive edge. 
+Businesses are investing in AI-powered systems 
+to automate repetitive and time-consuming tasks, 
+optimize pricing, identify new opportunities and 
+make investment decisions. In many cases, 
+these AI solutions are deeply embedded into the 
+organization’s enterprise applications, making 
+recommendations and predictions and influencing 
+critical decision-making.
+That said, it’s crucial to approach the procurement 
+process in a comprehensive and collaborative 
+manner. The procurement team needs to maintain 
+a high degree of control to ensure that the AI tool 
+delivers ethical, responsible and reliable solutions, 
+instilling confidence. The guidance on industry-standard practices 
+and ways to minimize organizational risks while 
+adopting AI technologies is very limited, and 
+there’s a pressing need for a responsible AI 
+procurement toolkit.
+This toolkit offers a holistic procurement process 
+beyond the technical evaluation of capabilities of 
+the solution providers that can be tailored as per 
+the needs of the organization and the industry 
+it operates in. It enables a clear understanding 
+of the business strategies that are driving the 
+need to procure an AI solution; the commercial 
+implications of the decision; quantity, quality and 
+security of the data involved; the governance 
+necessary for accountability and risk management; 
+and the impact on the organization’s ethics and 
+sustainability policies. 
+Further, it explores the role of various internal 
+stakeholders – from procurement to product  
+to legal to IT and others – in addressing the  
+five key considerations in this toolkit, which will 
+steer an organization’s procurement team in the 
+right direction.
+Overall, this AI procurement toolkit provides 
+comprehensive, non-prescriptive and industry-
+agnostic guidelines that will establish a procurement 
+process to facilitate the selection of a suitable, 
+ethical AI solution.
+Adopting AI Responsibly: Guidelines for Procurement
+28","1. What is the history of AI in enterprises?
+2. What are the benefits of AI for businesses?
+3. What are the risks associated with AI adoption?
+4. What are the key considerations for AI procurement?
+5. What is the role of stakeholders in AI procurement?","1. The history of AI in enterprises dates back to the early days of computing when rule-based systems and expert systems were used to perform specific tasks, such as analysing data and making predictions. However, these systems were limited in their capabilities and required significant amounts of human input to function effectively.
+2. The growth of AI has been exponential in the past decade, and AI technology is now achieving goals that seemed very distant just a few years ago. Organizations worldwide are increasingly adopting AI and ML to support business growth, improve efficiency and gain a competitive edge.
+3. Businesses are investing in AI-powered systems to automate repetitive and time-consuming tasks, optimize pricing, identify new opportunities and make investment decisions. In many cases, these AI solutions are deeply embedded into the organization’s enterprise applications, making recommendations and predictions and influencing critical decision-making.
+4. That said, it’s crucial to approach the procurement process in a comprehensive and collaborative manner. The procurement team needs to maintain a high degree of control to ensure that the AI tool delivers ethical, responsible and reliable solutions, instilling confidence. The guidance on industry-standard practices and ways to minimize organizational risks while adopting AI technologies is very limited, and there’s a pressing need for a responsible AI procurement toolkit.
+5. This toolkit offers a holistic procurement process beyond the technical evaluation of capabilities of the solution providers that can be tailored as per the needs of the organization and the industry it operates in. It enables a clear understanding of the business strategies that are driving the need to procure an AI solution; the commercial implications of the decision; quantity, quality and security of the data involved; the governance necessary for accountability and risk management; and the impact on the organization’s ethics and sustainability policies. 
+6. Further, it explores the role of various internal stakeholders – from procurement to product to legal to IT and others – in addressing the five key considerations in this toolkit, which will steer an organization’s procurement team in the right direction.
+7. Overall, this AI procurement toolkit provides comprehensive, non-prescriptive and industry-agnostic guidelines that will establish a procurement process to facilitate the selection of a suitable, ethical AI solution."
+28,"Appendix
+When a company ventures into the market to 
+explore AI offerings for the first time, it is beneficial 
+to begin with a few preliminary questions for all 
+potential suppliers. These questions, meant for 
+preliminary understanding and assessment, will  
+help the organization understand the applicability 
+and fitment of the suppliers and their solutions  
+to requirements. 
+Typically, commercial strategy questions are 
+not included in this evaluation stage as they are 
+addressed in subsequent steps of the procurement process after the scope of requirement is clearly 
+defined, along with a narrowed-down list of 
+comparable AI solutions.
+This exercise will help streamline and focus the 
+effort required in the detailed assessment. 
+The following list of questions will help buyers in 
+their initial assessment. To this, they can add more 
+solution domain/industry-specific questions to drive 
+a better understanding of the potential solutions.A1  Preliminary understanding and assessment
+The first step: questions to ask TABLE 9
+Specifications Preliminary considerations 
+1. Business strategy  –What kind of assurance or warranty does the supplier offer regarding the process and business outcomes?
+ –How is the proposed AI/ML solution an optimal approach to meet requirements? Can the supplier provide case 
+studies to support their response?
+ –Does the solution measure business results and user satisfaction? If so, how are these insights used for product 
+modifications or upgrades?
+ –Does the supplier provide key performance indicators (KPIs) for monitoring performance drifts that may prompt 
+retraining of the model?
+2. Data strategy  –What data quality assurance processes and frameworks (storage, management, transfer etc.) does the  
+supplier follow?
+ –In the case of external data ingestion, how does the supplier ensure complete, relevant, unbiased and timely data? 
+Who is responsible for ensuring the quality, usability and reliability of third-party data?
+3.  Ethics and 
+sustainability –What methods are used to train the AI model? Do the training methods uphold the principles of ethics (fairness, 
+interpretability, privacy, security etc.)? 
+ –Can the supplier identify possible sources of bias? What are the checks in place within the model to prevent 
+biases from creeping in?
+ –Does your solution address new and emerging ethical risks such as misinformation, over-reliance and loss of skills?
+4.  Governance, risk 
+and compliance –Does the supplier comply with data-related regulations (e.g. General Data Protection Regulation (GDPR), 
+California Consumer Privacy Act (CCPA), Health Insurance Portability and Accountability Act (HIPAA), Children’s 
+Online Privacy Protection Act (COPPA) etc.)?
+ –Does the supplier follow any AI governance standards and best practices set by international standards 
+organizations (such as the International Organization for Standardization (ISO) and the Institute of Electrical and 
+Electronics Engineers Standards Association (IEEE))?
+Adopting AI Responsibly: Guidelines for Procurement
+29","1. What is the business strategy of the supplier?
+2. What data quality assurance processes and frameworks does the supplier follow?
+3. What methods are used to train the AI model? Do the training methods uphold the principles of ethics?
+4. Does the supplier comply with data-related regulations? Does the supplier follow any AI governance standards?","1. The supplier's business strategy should be in line with the buyer's business strategy.
+2. The supplier should have data quality assurance processes and frameworks in place to ensure the quality of the data they are using.
+3. The methods used to train the AI model should be ethical.
+4. The supplier should comply with data-related regulations and follow any AI governance standards."
+29,"Contributors
+AcknowledgementsThe report was co-created with active guidance 
+and support from experts and diverse stakeholders 
+in the World Economic Forum project community 
+on Shaping the Future of Technology Governance, 
+who shared insights and lessons learned through 
+interviews, workshops and consultation sessions. 
+The opinions expressed herein do not necessarily 
+reflect the views of the individuals or organizations 
+involved in the project or listed below. Sincere 
+thanks are extended to those who contributed their 
+insights via interviews and workshops, as well as 
+those not captured below.
+World Economic Forum 
+Benjamin Larsen 
+Lead, Artificial Intelligence and Machine LearningGEP
+Aditya Desai 
+Director, Consulting
+Joanne Jacob 
+Senior Consultant, Consulting
+Sitharthan K 
+Senior Consultant, Consulting
+Mudit Kumar  
+Vice President, Consulting
+Raina Saxena 
+Senior Director, Consulting
+Hemanty Tudu 
+Senior Consultant, Consulting
+Sincere appreciation is extended to the following 
+working group members, who spent numerous 
+hours providing critical input and feedback to the 
+drafts. Their diverse insights are fundamental to the 
+success of this work.
+Uthman Ali 
+Digital Ethics Lead and Senior Product Analyst, bp
+Chloe Autio 
+Director, Policy, The Cantellus Group 
+Ivar Beljaars 
+Senior Vice-President, Sales, CUJO AI
+Megha Chawla  
+Manager, Open Innovation and Tech Evangelist, 
+HCLTech
+Amy DeCicco 
+Vice-President, Marketing, retrain.ai 
+Sachin Dev Duggal 
+Chief Wizard, Builder.ai
+Dean Horton 
+Digital Security Risk Manager, Procurement, bp
+Austin Imperato 
+Chief of Staff, Government and Regulatory Affairs, 
+IBM
+Igor Jablokov 
+Chief Executive Officer, PryonMukund Kalmanker 
+Vice-President and Global Head, AI Solutions, 
+Wipro
+Vijay Karunamurthy 
+Field Chief Technology Officer, Scale AI 
+Paige Kassalen 
+Head, Customer Operations, CrowdAI
+Abhinav Khare  
+Head, Tech Venturing and Open Innovation 
+Ecosystem, HCLTech 
+Simon Greenman 
+Partner, Best Practice AI 
+Abhishek Gupta 
+Senior Responsible AI Leader and Expert, Boston 
+Consulting Group (BCG)
+Meirav Oren 
+Chief Executive Officer and Co-Founder, Versatile
+Claudia Perry 
+Digital Graduate, Digital Science, bp
+Devaki Raj 
+Chief Executive Officer, CrowdAI
+Nikita Sejpal-Shah 
+Cloud and IoT Lead, Procurement, bp 
+Adopting AI Responsibly: Guidelines for Procurement
+30","1. What is the World Economic Forum?
+2. What is the Shaping the Future of Technology Governance project?
+3. Who contributed to the report?
+4. What are the opinions expressed in the report?
+5. What are the working group members?
+6. What is the Digital Ethics Lead?
+7. What is the Cloud and IoT Lead?","1. The World Economic Forum is a nonprofit organization that engages the foremost political, business, and other leaders of society to shape global, regional, and industry agendas.
+2. The Shaping the Future of Technology Governance project is a collaborative effort between the World Economic Forum and experts and diverse stakeholders to develop guidelines for the responsible adoption of artificial intelligence.
+3. The report was co-created with active guidance and support from experts and diverse stakeholders in the World Economic Forum project community on Shaping the Future of Technology Governance.
+4. The opinions expressed in the report do not necessarily reflect the views of the individuals or organizations involved in the project or listed below.
+5. The working group members are diverse experts who provided critical input and feedback to the drafts of the report.
+6. The Digital Ethics Lead is a senior product analyst at bp.
+7. The Cloud and IoT Lead is a manager at HCLTech."
+30,"Production
+Studio Miko
+Laurence Denmark 
+Creative Director
+Martha Howlett 
+Editor
+Oliver Turner 
+DesignerKaren Silverman 
+Chief Executive Officer and Founder, The Cantellus 
+Group 
+Navrina Singh 
+Founder and Chief Executive Officer, Credo AI 
+Jascha Stein 
+Co-Founder and Chief Executive Officer, OmniBot.aiAndy Smith 
+Principal Security Architect, bp
+Laura Taddei  
+Director, Business Affairs, BenevolentAI
+Erik Vogt  
+Vice-President, Enterprise Solutions, Appen
+Adopting AI Responsibly: Guidelines for Procurement
+31","1. What are the guidelines for responsible AI procurement?
+2. What are the benefits of responsible AI procurement?
+3. What are the challenges of responsible AI procurement?
+4. What are the key considerations for responsible AI procurement?","1. The guidelines for responsible AI procurement are to ensure that the AI is ethical and does not have any negative consequences.
+2. The benefits of responsible AI procurement are that it can help to ensure that the AI is ethical and does not have any negative consequences.
+3. The challenges of responsible AI procurement are that it can be difficult to ensure that the AI is ethical and does not have any negative consequences.
+4. The key considerations for responsible AI procurement are to ensure that the AI is ethical and does not have any negative consequences."
+31,"Endnotes
+1. Precedence Research, Artificial Intelligence (AI) Market, 2023, https://www.precedenceresearch.com/artificial-intelligence-
+market.
+2. “Get Out of the Data Swamp With a Governed Data Lake”, Dataeaze, 2019, https://www.dataeaze.io/get-out-of-the-
+data-swamp-with-a-governed-data-lake/.
+3. Gonfalonieri, Alexandre, “Do You Need Synthetic Data For Your AI Project?”, Towards Data Science, 21 October 2019, 
+https://towardsdatascience.com/do-you-need-synthetic-data-for-your-ai-project-e7ecc2072d6b.
+4. Statista, Average Cost of a Data Breach in the United States From 2006 to 2022 [Graph], https://www.statista.com/
+statistics/273575/us-average-cost-incurred-by-a-data-breach.
+5. European Commission, Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL 
+LAYING DOWN HARMONISED RULES ON ARTIFICIAL INTELLIGENCE (ARTIFICIAL INTELLIGENCE ACT) 
+AND AMENDING CERTAIN UNION LEGISLATIVE ACTS, 2021, https://eur-lex.europa.eu/legal-content/EN/
+TXT/?uri=celex%3A52021PC0206. 
+6. New York City Department of Consumer and Worker Protection, Notice of Adoption of Final Rule, 2023, https://rules.
+cityofnewyork.us/rule/automated-employment-decision-tools-updated/. 
+Adopting AI Responsibly: Guidelines for Procurement
+32","1. What is the artificial intelligence (AI) market forecast for 2023?
+2. What are some of the benefits of using a governed data lake?
+3. What are some of the challenges of using synthetic data?
+4. What is the average cost of a data breach in the United States?
+5. What is the European Union proposing with regards to AI?
+6. What are the guidelines for procurement of AI in New York City?","1. The artificial intelligence (AI) market forecast for 2023 is $118.6 billion.
+2. Some of the benefits of using a governed data lake are that it can help get rid of the data swamp, it can improve data quality, and it can improve data governance.
+3. The challenges of using synthetic data are that it can be expensive, it can be difficult to create, and it can be difficult to find the right data.
+4. The average cost of a data breach in the United States is $3.86 million.
+5. The European Union is proposing a regulation that would lay down harmonized rules on AI.
+6. The guidelines for procurement of AI in New York City are that agencies should consider the impact of AI on workers, the use of data, and the impact of AI on civil rights and liberties."
+32,"World Economic Forum
+91–93 route de la Capite
+CH-1223 Cologny/Geneva
+Switzerland  
+Tel.:  +41 (0) 22 869 1212
+Fax: +41 (0) 22 786 2744
+contact@weforum.org
+www.weforum.orgThe World Economic Forum, 
+committed to improving  
+the state of the world, is the 
+International Organization for 
+Public-Private Cooperation.
+ 
+The Forum engages the 
+foremost political, business  
+and other leaders of society  
+to shape global, regional 
+and industry agendas.","1. What is the World Economic Forum?
+2. What is the Forum's mission?
+3. Who participates in the Forum?","1. The World Economic Forum is an international organization for public-private cooperation.
+2. The Forum's mission is to improve the state of the world.
+3. The Forum engages the foremost political, business, and other leaders of society to shape global, regional, and industry agendas."
