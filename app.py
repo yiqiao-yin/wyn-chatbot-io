@@ -61,7 +61,7 @@ model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Nex
 #         "Upload Your Own"
 #     ),
 # )
-domain_name = st.selectbox(
+domain_name = st.sidebar.selectbox(
     'Choose a domain:',
     (
         "General",
