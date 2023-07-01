@@ -65,11 +65,11 @@ domain_name = st.sidebar.selectbox(
     'Choose a domain:',
     (
         "General",
+        "CBT",
         "Coder",
         "Labcorp 2022 Annual Report",
         "Mckinsey Generative AI Report",
         "Adopting AI Responsibly",
-        "CBT",
         "WYN-Search",
         "Upload Your Own"
     )
