@@ -1,5 +1,9 @@
 # WYN-Chat-IO
 
+<p>
+    <img src="https://github.com/yiqiao-yin/wyn-chatbot-io/blob/main/src/docs/MAIN_SYSTEM.drawio.png"></img>
+</p>
+
 WYN-Chat-IO is a repository that uses the Streamlit package to build a chatbot. The streamlit package helps in designing the frontend, whereas the streamlit_chat package is used to design the chat history of the bot. The main objective of this project is to create an interactive chatbot that can communicate with users and provide them assistance with various tasks.
 
 Link of the app: [link](https://wyn-chatbot-io.streamlit.app/)
