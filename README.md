@@ -1,6 +1,6 @@
 # WYN-Chat-IO
 
-<p>
+<p align="center">
     <img src="https://github.com/yiqiao-yin/wyn-chatbot-io/blob/main/src/docs/MAIN_SYSTEM.drawio.png"></img>
 </p>
 
