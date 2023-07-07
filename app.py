@@ -47,20 +47,12 @@ similarity_indicator = st.sidebar.radio(
     "Choose a similarity algorithm:",
     ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "STS-Palm", "Next..."),
 )
-model_name = st.sidebar.radio("Choose a model:", ("ChatGPT", "Yin", "Palm", "Next..."))
-# domain_name = st.sidebar.radio(
-#     "Choose a domain:",
-#     (
-#         "General",
-#         "Coder",
-#         "Labcorp 2022 Annual Report",
-#         "Mckinsey Generative AI Report",
-#         "Adopting AI Responsibly",
-#         "CBT",
-#         "WYN-Search",
-#         "Upload Your Own"
-#     ),
-# )
+model_name = st.sidebar.radio(
+    "Choose a model:",
+    (
+        "ChatGPT", "Yin", "Palm", "Next..."
+    )
+)
 domain_name = st.sidebar.selectbox(
     'Choose a domain:',
     (
@@ -120,7 +112,7 @@ def call_chatgpt(prompt: str) -> str:
 
     # Use the OpenAI API to generate a response based on the input prompt.
     response = openai.Completion.create(
-        model="text-davinci-003",
+        model="gpt-4-0613",
         prompt=prompt,
         temperature=0.3,
         max_tokens=800,
