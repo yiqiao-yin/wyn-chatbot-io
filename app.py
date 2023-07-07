@@ -111,7 +111,7 @@ def call_chatgpt(prompt: str) -> str:
     """
 
     # Use the OpenAI API to generate a response based on the input prompt.
-    response = openai.Completion.create(
+    response = openai.ChatCompletion.create(
         model="gpt-4",
         prompt=prompt,
         temperature=0.3,
