@@ -7,6 +7,7 @@ import google.generativeai as palm
 import numpy as np
 import openai
 import pandas as pd
+import re
 import requests
 import streamlit as st
 from dotenv import find_dotenv, load_dotenv
@@ -358,6 +359,44 @@ def convert_to_list_of_dict(df: pd.DataFrame) -> List[Dict[str, str]]:
     return result
 
 
+def convert_to_list_of_dict_single_pair(df: pd.DataFrame) -> List[Dict[str, str]]:
+    questions = pd.DataFrame()
+    answers = pd.DataFrame()
+
+    for i in range(2):
+        processed_df_quest = pd.DataFrame()
+        processed_df_ans = pd.DataFrame()
+
+        s = df.questions[i]
+        split_s = re.split(r'\d+\.', s)
+        split_s = [i.strip() for i in split_s if i]
+        processed_df_quest['questions'] = split_s
+        questions = pd.concat([questions, processed_df_quest])
+
+        s = df.answers[i]
+        split_s = re.split(r'\d+\.', s)
+        split_s = [i.strip() for i in split_s if i]
+        processed_df_ans['answers'] = split_s
+        answers = pd.concat([answers, processed_df_ans])
+
+    questions['role'] = 'user'
+    questions = questions[['role', 'questions']]
+    questions.columns = ['role', 'content']
+    questions.index = np.arange(1, len(questions) + 1)
+
+    answers['role'] = 'assistant'
+    answers = answers[['role', 'answers']]
+    answers.columns = ['role', 'content']
+    answers.index = np.arange(1, len(answers) + 1)
+
+    final_messages = []
+    for i in range(len(questions)):
+        final_messages.append(questions.iloc[i, :].to_dict())
+        final_messages.append(answers.iloc[i, :].to_dict())
+
+    return final_messages
+
+
 def extract_data(feed):
     pdf_reader = PdfReader(feed)
     pages = len(pdf_reader.pages)
@@ -481,6 +520,7 @@ with container:
                 df, user_input, similarity_indicator.lower().replace("-", "")
             )
             qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
+            qa_pairs_single = convert_to_list_of_dict_single_pair(df_screened_by_dist_score)
 
             processed_user_question = f"""
                 Learn from the context: {qa_pairs}
@@ -490,7 +530,7 @@ with container:
             if model_name == "ChatGPT":
                 output = call_chatgpt(processed_user_question)
             elif model_name == "GPT4":
-                output = call_chatcompletion(messages=qa_pairs)       
+                output = call_chatcompletion(messages=qa_pairs_single)       
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
             else:
