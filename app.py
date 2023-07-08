@@ -550,7 +550,8 @@ if st.session_state["generated"]:
             if domain_name.lower() != "coder":
                 message(
                     f"""
-                        👇 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*0.002/1000} \n {answer}
+                        {answer} \n 
+                        👆 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*0.002/1000}
                     """
                 )
             else:
