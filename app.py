@@ -587,16 +587,17 @@ if st.session_state["generated"]:
         for i in range(len(st.session_state["generated"])):
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
             answer = st.session_state["generated"][i]["data"]
+            unit_price = 0.03 if model_name == "GPT4" else 0.002
             if domain_name.lower() != "coder":
                 message(
                     f"""
                         {answer} \n 
-                        👆 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*0.002/1000}
+                        👆 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*unit_price/1000}
                     """
                 )
             else:
                 message(
-                    f"👇 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*0.002/1000}",
+                    f"👇 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*unit_price/1000}",
                     key=f"{i}",
                 )
                 st.code(answer)
