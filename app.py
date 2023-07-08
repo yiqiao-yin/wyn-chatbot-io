@@ -519,7 +519,6 @@ with container:
             df_screened_by_dist_score = add_dist_score_column(
                 df, user_input, similarity_indicator.lower().replace("-", "")
             )
-            st.table(df_screened_by_dist_score)
             qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
             qa_pairs_single = convert_to_list_of_dict_single_pair(df_screened_by_dist_score)
 
@@ -531,7 +530,7 @@ with container:
             if model_name == "ChatGPT":
                 output = call_chatgpt(processed_user_question)
             elif model_name == "GPT4":
-                output = call_chatcompletion(messages=qa_pairs_single)       
+                output = call_chatcompletion(messages=qa_pairs)       
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
             else:
