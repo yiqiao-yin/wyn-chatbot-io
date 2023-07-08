@@ -50,7 +50,7 @@ similarity_indicator = st.sidebar.radio(
 model_name = st.sidebar.radio(
     "Choose a model:",
     (
-        "ChatGPT", "Yin", "Palm", "Next..."
+        "ChatGPT", "GPT4", "Yin", "Palm", "Next..."
     )
 )
 domain_name = st.sidebar.selectbox(
@@ -126,6 +126,31 @@ def call_chatgpt(prompt: str) -> str:
 
     # Return the generated AI response.
     return ans
+
+
+def call_chatcompletion(messages: list, model: str = "gpt-4", temperature: int = 0) -> str:
+    """
+    Get the completion response from a list of messages using OpenAI's ChatCompletion API.
+
+    Parameters:
+    - messages (list): A list of messages which includes role ("user" or "assistant") and content.
+    - model (str): The name of the OpenAI model to use. Default is "gpt-4".
+    - temperature (int): The temperature parameter for generating more random or deterministic responses. Default is 0.
+
+    Returns:
+    - str: The content of the first response choice in the completed message.
+
+    """
+    # Call OpenAI's ChatCompletion API with the specified parameters
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=messages,
+        temperature=temperature,
+    )
+
+    # Get the content of the first response choice in the completed message
+    return response.choices[0].message["content"]
+
 
 
 def call_yin_test1(url):
@@ -464,6 +489,8 @@ with container:
             """
             if model_name == "ChatGPT":
                 output = call_chatgpt(processed_user_question)
+            elif model_name == "GPT4":
+                output = call_chatcompletion(messages=qa_pairs)       
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
             else:
