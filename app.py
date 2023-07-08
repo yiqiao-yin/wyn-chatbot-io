@@ -363,17 +363,17 @@ def convert_to_list_of_dict_single_pair(df: pd.DataFrame) -> List[Dict[str, str]
     questions = pd.DataFrame()
     answers = pd.DataFrame()
 
-    for i in range(2):
+    for i in range(df.shape[0]):
         processed_df_quest = pd.DataFrame()
         processed_df_ans = pd.DataFrame()
 
-        s = df.questions[i]
+        s = df.iloc[i, 2]
         split_s = re.split(r'\d+\.', s)
         split_s = [i.strip() for i in split_s if i]
         processed_df_quest['questions'] = split_s
         questions = pd.concat([questions, processed_df_quest])
 
-        s = df.answers[i]
+        s = df.iloc[0, 3]
         split_s = re.split(r'\d+\.', s)
         split_s = [i.strip() for i in split_s if i]
         processed_df_ans['answers'] = split_s
