@@ -390,7 +390,8 @@ def convert_to_list_of_dict_single_pair(df: pd.DataFrame) -> List[Dict[str, str]
     answers.index = np.arange(1, len(answers) + 1)
 
     final_messages = []
-    for i in range(len(questions)):
+    L = min(len(questions), len(answers))
+    for i in range(L):
         final_messages.append(questions.iloc[i, :].to_dict())
         final_messages.append(answers.iloc[i, :].to_dict())
 
