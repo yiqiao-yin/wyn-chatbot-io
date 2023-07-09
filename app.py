@@ -147,6 +147,7 @@ def call_chatcompletion(messages: list, model: str = "gpt-4", temperature: int =
         model=model,
         messages=messages,
         temperature=temperature,
+        max_tokens=4000,
     )
 
     # Get the content of the first response choice in the completed message
