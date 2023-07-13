@@ -456,10 +456,10 @@ def token_size(string):
     return float(len(tokens))
 
 
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import PyPDFLoader
 from langchain.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 
 def langchain_vector_store(
