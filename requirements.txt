@@ -2,6 +2,8 @@ chromadb                          == 0.3.29
 duckduckgo-search                 >= 3.8.0
 google-generativeai               >= 0.1.0
 langchain                         == 0.0.79
+# langchain                         == 0.0.213
+langchainplus-sdk                 == 0.0.17
 openai                            == 0.27.7
 numpy                             == 1.24.3
 python-dotenv                     == 1.0.0
