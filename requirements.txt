@@ -7,6 +7,7 @@ langchainplus-sdk                 == 0.0.17
 openai                            == 0.27.7
 numpy                             == 1.24.3
 python-dotenv                     == 1.0.0
+pypdf                             == 3.12.1
 PyPDF2                            == 3.0.1
 streamlit                         == 1.23.1
 streamlit-chat                    == 0.0.2.2

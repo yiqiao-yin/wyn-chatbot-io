@@ -457,42 +457,42 @@ def token_size(string):
 
 
 
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.document_loaders import PyPDFLoader
+from langchain.vectorstores import Chroma
+from langchain.embeddings.openai import OpenAIEmbeddings
 
-# def langchain_vector_store(
-#         domain_name: str, question: str,
-#         fpath: str
-# ) -> str:
-#     from langchain.text_splitter import RecursiveCharacterTextSplitter
-#     from langchain.document_loaders import PyPDFLoader
-#     from langchain.vectorstores import Chroma
-#     from langchain.embeddings.openai import OpenAIEmbeddings
-#     if domain_name == "Deep Learning Notes":
-#         # Load PDF
-#         loaders = [
-#             # Duplicate documents on purpose - messy data
-#             PyPDFLoader(fpath)
-#         ]
-#         docs = []
-#         for loader in loaders:
-#             docs.extend(loader.load())
+def langchain_vector_store(
+        domain_name: str, question: str,
+        fpath: str
+) -> str:
+    if domain_name == "Deep Learning Notes":
+        # Load PDF
+        loaders = [
+            # Duplicate documents on purpose - messy data
+            PyPDFLoader(fpath)
+        ]
+        docs = []
+        for loader in loaders:
+            docs.extend(loader.load())
 
-#         # Split
-#         text_splitter = RecursiveCharacterTextSplitter(
-#             chunk_size = 1500,
-#             chunk_overlap = 150
-#         )
-#         splits = text_splitter.split_documents(docs)
-#         embedding = OpenAIEmbeddings()
-#         vectordb = Chroma.from_documents(
-#             documents=splits,
-#             embedding=embedding,
-#         )
-#         docs = vectordb.similarity_search(question, k=3)
-#         context = docs[0].page_content
-#     else:
-#         context = None
+        # Split
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size = 1500,
+            chunk_overlap = 150
+        )
+        splits = text_splitter.split_documents(docs)
+        embedding = OpenAIEmbeddings()
+        vectordb = Chroma.from_documents(
+            documents=splits,
+            embedding=embedding,
+        )
+        docs = vectordb.similarity_search(question, k=3)
+        context = docs[0].page_content
+    else:
+        context = None
     
-#     return context
+    return context
 
 
 if domain_name == "Upload Your Own":
