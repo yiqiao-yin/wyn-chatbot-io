@@ -63,7 +63,7 @@ domain_name = st.sidebar.selectbox(
         "Labcorp 2022 Annual Report",
         "Mckinsey Generative AI Report",
         "Adopting AI Responsibly",
-        "WYN-Search",
+        "Deep Learning Notes",
         "Upload Your Own"
     )
 )
@@ -456,6 +456,45 @@ def token_size(string):
     return float(len(tokens))
 
 
+from langchain.document_loaders import PyPDFLoader
+from langchain.vectorstores import Chroma
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+
+
+def langchain_vector_store(
+        domain_name: str, question: str,
+        fpath: str
+) -> str:
+    if domain_name == "Deep Learning Notes":
+        # Load PDF
+        loaders = [
+            # Duplicate documents on purpose - messy data
+            PyPDFLoader(fpath)
+        ]
+        docs = []
+        for loader in loaders:
+            docs.extend(loader.load())
+
+        # Split
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size = 1500,
+            chunk_overlap = 150
+        )
+        splits = text_splitter.split_documents(docs)
+        embedding = OpenAIEmbeddings()
+        vectordb = Chroma.from_documents(
+            documents=splits,
+            embedding=embedding,
+        )
+        docs = vectordb.similarity_search(question, k=3)
+        context = docs[0].page_content
+    else:
+        context = None
+    
+    return context
+
+
 if domain_name == "Upload Your Own":
     st.write("### Upload or select your PDF file")
     uploaded_file = st.file_uploader("Choose your .pdf file", type="pdf")
@@ -550,16 +589,15 @@ with container:
                 output = call_palm(processed_user_question)
             else:
                 output = call_chatgpt(processed_user_question)
-        elif domain_name == "WYN-Search":
-            search_results = internet_search(user_input)
-            context = search_results['context']
-            # context = ' '.join(context)[0:2000]
-            urls = search_results['urls']
+        elif domain_name == "Deep Learning Notes":
+            context = langchain_vector_store(
+                domain_name=domain_name,
+                question=user_input,
+                fpath="deep-learning-notes.pdf")
             processed_user_question = f"""
-                You are a search engine and you have information from the internet here: {context}.
-                In addition, you have a list of URls as reference: {urls}.
-                Answer the following question: {user_input} based on the information above. 
-                Make sure to return URls as list of citations. 
+                Learn from the context: {context}
+                Answer the following question as if you are the AI assistant: {user_input}
+                Produce a text answer that are complete sentences.
             """
             if model_name == "ChatGPT":
                 output = call_chatgpt(processed_user_question)
