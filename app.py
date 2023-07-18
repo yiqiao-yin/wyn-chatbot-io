@@ -1,23 +1,23 @@
 import json
 import os
+import re
 from typing import Dict, List, Union
 
-from duckduckgo_search import DDGS
 import google.generativeai as palm
 import numpy as np
 import openai
 import pandas as pd
-import re
 import requests
 import streamlit as st
 from dotenv import find_dotenv, load_dotenv
+from duckduckgo_search import DDGS
 from PyPDF2 import PdfReader
 from scipy.spatial.distance import cosine
 from sentence_transformers import SentenceTransformer
 from streamlit_chat import message
 
-
 _ = load_dotenv(find_dotenv())  # read local .env file
+
 
 # Setting page title and header
 st.set_page_config(page_title="WYN AI", page_icon=":robot_face:")
@@ -42,47 +42,7 @@ if "domain_name" not in st.session_state:
     st.session_state["domain_name"] = []
 
 
-# Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
-st.sidebar.title("Sidebar")
-similarity_indicator = st.sidebar.selectbox(
-    "Choose a similarity algorithm:",
-    ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "STS-Palm", "Next..."),
-)
-model_name = st.sidebar.selectbox(
-    "Choose a model:",
-    (
-        "ChatGPT", "GPT4", "Yin", "Palm", "Next..."
-    )
-)
-domain_name = st.sidebar.selectbox(
-    'Choose a domain:',
-    (
-        "General",
-        "CBT",
-        "Coder",
-        "Labcorp 2022 Annual Report",
-        "Mckinsey Generative AI Report",
-        "Adopting AI Responsibly",
-        "Deep Learning Notes",
-        "Upload Your Own"
-    )
-)
-# Load data
-if domain_name == "Labcorp 2022 Annual Report":
-    df = pd.read_csv("lh_ar_2022.csv")
-elif domain_name == "Mckinsey Generative AI Report":
-    df = pd.read_csv("mckinsey_gen_ai.csv")
-elif domain_name == "Adopting AI Responsibly":
-    df = pd.read_csv("adopt_ai_responsibly.csv")
-else:
-    df = pd.DataFrame()
-counter_placeholder = st.sidebar.empty()
-counter_placeholder.write(f"Next item ... ")
-clear_button = st.sidebar.button("Clear Conversation", key="clear")
-st.sidebar.markdown(
-    "@ [Yiqiao Yin](https://www.y-yin.io/) | [LinkedIn](https://www.linkedin.com/in/yiqiaoyin/) | [YouTube](https://youtube.com/YiqiaoYin/)"
-)
-
+# Sidebar - Instruction Manual
 with st.sidebar:
     with st.expander("Instruction Manual 📖"):
         st.markdown(
@@ -125,7 +85,49 @@ with st.sidebar:
             """
         )
 
-# reset everything
+
+# Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
+st.sidebar.title("Sidebar")
+similarity_indicator = st.sidebar.selectbox(
+    "Choose a similarity algorithm:",
+    ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "STS-Palm", "Next..."),
+)
+model_name = st.sidebar.selectbox(
+    "Choose a model:", ("ChatGPT", "GPT4", "Yin", "Palm", "Next...")
+)
+domain_name = st.sidebar.selectbox(
+    "Choose a domain:",
+    (
+        "General",
+        "CBT",
+        "Coder",
+        "Labcorp 2022 Annual Report",
+        "Mckinsey Generative AI Report",
+        "Adopting AI Responsibly",
+        "Deep Learning Notes",
+        "Upload Your Own",
+    ),
+)
+
+
+# Load data
+if domain_name == "Labcorp 2022 Annual Report":
+    df = pd.read_csv("lh_ar_2022.csv")
+elif domain_name == "Mckinsey Generative AI Report":
+    df = pd.read_csv("mckinsey_gen_ai.csv")
+elif domain_name == "Adopting AI Responsibly":
+    df = pd.read_csv("adopt_ai_responsibly.csv")
+else:
+    df = pd.DataFrame()
+counter_placeholder = st.sidebar.empty()
+counter_placeholder.write(f"Next item ... ")
+clear_button = st.sidebar.button("Clear Conversation", key="clear")
+st.sidebar.markdown(
+    "@ [Yiqiao Yin](https://www.y-yin.io/) | [LinkedIn](https://www.linkedin.com/in/yiqiaoyin/) | [YouTube](https://youtube.com/YiqiaoYin/)"
+)
+
+
+# Reset everything
 if clear_button:
     st.session_state["generated"] = []
     st.session_state["past"] = []
@@ -171,7 +173,9 @@ def call_chatgpt(prompt: str) -> str:
     return ans
 
 
-def call_chatcompletion(messages: list, model: str = "gpt-4", temperature: int = 0) -> str:
+def call_chatcompletion(
+    messages: list, model: str = "gpt-4", temperature: int = 0
+) -> str:
     """
     Get the completion response from a list of messages using OpenAI's ChatCompletion API.
 
@@ -194,7 +198,6 @@ def call_chatcompletion(messages: list, model: str = "gpt-4", temperature: int =
 
     # Get the content of the first response choice in the completed message
     return response.choices[0].message["content"]
-
 
 
 def call_yin_test1(url):
@@ -323,13 +326,13 @@ def calculate_sts_openai_score(sentence1: str, sentence2: str) -> float:
 
 def palm_text_embedding(prompt: str) -> str:
     model = "models/embedding-gecko-001"
-    return palm.generate_embeddings(model=model, text=prompt)['embedding']
+    return palm.generate_embeddings(model=model, text=prompt)["embedding"]
 
 
 def calculate_sts_palm_score(sentence1: str, sentence2: str) -> float:
     # Compute sentence embeddings
-    embedding1 = palm_text_embedding(sentence1) # Flatten the embedding array
-    embedding2 = palm_text_embedding(sentence2) # Flatten the embedding array
+    embedding1 = palm_text_embedding(sentence1)  # Flatten the embedding array
+    embedding2 = palm_text_embedding(sentence2)  # Flatten the embedding array
 
     # Convert to array
     embedding1 = np.asarray(embedding1)
@@ -411,25 +414,25 @@ def convert_to_list_of_dict_single_pair(df: pd.DataFrame) -> List[Dict[str, str]
         processed_df_ans = pd.DataFrame()
 
         s = df.iloc[i, 2]
-        split_s = re.split(r'\d+\.', s)
+        split_s = re.split(r"\d+\.", s)
         split_s = [i.strip() for i in split_s if i]
-        processed_df_quest['questions'] = split_s
+        processed_df_quest["questions"] = split_s
         questions = pd.concat([questions, processed_df_quest])
 
         s = df.iloc[0, 3]
-        split_s = re.split(r'\d+\.', s)
+        split_s = re.split(r"\d+\.", s)
         split_s = [i.strip() for i in split_s if i]
-        processed_df_ans['answers'] = split_s
+        processed_df_ans["answers"] = split_s
         answers = pd.concat([answers, processed_df_ans])
 
-    questions['role'] = 'user'
-    questions = questions[['role', 'questions']]
-    questions.columns = ['role', 'content']
+    questions["role"] = "user"
+    questions = questions[["role", "questions"]]
+    questions.columns = ["role", "content"]
     questions.index = np.arange(1, len(questions) + 1)
 
-    answers['role'] = 'assistant'
-    answers = answers[['role', 'answers']]
-    answers.columns = ['role', 'content']
+    answers["role"] = "assistant"
+    answers = answers[["role", "answers"]]
+    answers.columns = ["role", "content"]
     answers.index = np.arange(1, len(answers) + 1)
 
     final_messages = []
@@ -459,82 +462,43 @@ def internet_search(prompt: str) -> Dict[str, str]:
     list_of_urls = []
     with DDGS() as ddgs:
         i = 0
-        for r in ddgs.text(prompt, region='wt-wt', safesearch='Off', timelimit='y'):
+        for r in ddgs.text(prompt, region="wt-wt", safesearch="Off", timelimit="y"):
             if i <= 5:
-                content_bodies.append(r['body'])
-                list_of_urls.append(r['href'])
+                content_bodies.append(r["body"])
+                list_of_urls.append(r["href"])
                 i += 1
             else:
                 break
-    
-    return {'context': content_bodies, 'urls': list_of_urls}
+
+    return {"context": content_bodies, "urls": list_of_urls}
 
 
 def read_url(url: str) -> str:
-  """
-  Reads the contents of a public URL as a string.
+    """
+    Reads the contents of a public URL as a string.
 
-  Args:
-    url: A public URL.
+    Args:
+      url: A public URL.
 
-  Returns:
-    A string containing the contents of the URL.
-  """
+    Returns:
+      A string containing the contents of the URL.
+    """
 
-  # Create a request object.
-  request = requests.get(url)
+    # Create a request object.
+    request = requests.get(url)
 
-  # Check the response status code.
-  if request.status_code == 200:
-    # The request was successful, so we can read the content.
-    return request.content.decode("utf-8")
-  else:
-    # The request failed, so we raise an exception.
-    raise Exception("Unable to read URL.")
+    # Check the response status code.
+    if request.status_code == 200:
+        # The request was successful, so we can read the content.
+        return request.content.decode("utf-8")
+    else:
+        # The request failed, so we raise an exception.
+        raise Exception("Unable to read URL.")
 
 
 def token_size(string):
     tokens = string.split()
     return float(len(tokens))
-
-
-
-# from langchain.text_splitter import RecursiveCharacterTextSplitter
-# from langchain.document_loaders import PyPDFLoader
-# from langchain.vectorstores import Chroma
-# from langchain.embeddings.openai import OpenAIEmbeddings
-
-# def langchain_vector_store(
-#         domain_name: str, question: str,
-#         fpath: str
-# ) -> str:
-#     if domain_name == "Deep Learning Notes":
-#         # Load PDF
-#         loaders = [
-#             # Duplicate documents on purpose - messy data
-#             PyPDFLoader(fpath)
-#         ]
-#         docs = []
-#         for loader in loaders:
-#             docs.extend(loader.load())
-
-#         # Split
-#         text_splitter = RecursiveCharacterTextSplitter(
-#             chunk_size = 1500,
-#             chunk_overlap = 150
-#         )
-#         splits = text_splitter.split_documents(docs)
-#         embedding = OpenAIEmbeddings()
-#         vectordb = Chroma.from_documents(
-#             documents=splits,
-#             embedding=embedding,
-#         )
-#         docs = vectordb.similarity_search(question, k=3)
-#         context = docs[0].page_content
-#     else:
-#         context = None
-    
-#     return context
 
 
 if domain_name == "Upload Your Own":
@@ -551,6 +515,7 @@ if domain_name == "Upload Your Own":
 response_container = st.container()
 # container for text box
 container = st.container()
+
 
 with container:
     with st.form(key="my_form", clear_on_submit=True):
@@ -596,14 +561,18 @@ with container:
                 output = call_yin_test1(api_url)["answer"]
             else:
                 output = call_chatgpt(processed_user_question)
-        elif domain_name in ["Labcorp 2022 Annual Report", 
-                             "Mckinsey Generative AI Report",
-                             "Adopting AI Responsibly"]:
+        elif domain_name in [
+            "Labcorp 2022 Annual Report",
+            "Mckinsey Generative AI Report",
+            "Adopting AI Responsibly",
+        ]:
             df_screened_by_dist_score = add_dist_score_column(
                 df, user_input, similarity_indicator.lower().replace("-", "")
             )
             qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
-            qa_pairs_single = convert_to_list_of_dict_single_pair(df_screened_by_dist_score)
+            qa_pairs_single = convert_to_list_of_dict_single_pair(
+                df_screened_by_dist_score
+            )
 
             processed_user_question = f"""
                 Learn from the context: {qa_pairs}
@@ -613,7 +582,7 @@ with container:
             if model_name == "ChatGPT":
                 output = call_chatgpt(processed_user_question)
             elif model_name == "GPT4":
-                output = call_chatcompletion(messages=qa_pairs)       
+                output = call_chatcompletion(messages=qa_pairs)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
             else:
@@ -631,22 +600,6 @@ with container:
                 output = call_palm(processed_user_question)
             else:
                 output = call_chatgpt(processed_user_question)
-        # elif domain_name == "Deep Learning Notes":
-        #     context = langchain_vector_store(
-        #         domain_name=domain_name,
-        #         question=user_input,
-        #         fpath="deep-learning-notes.pdf")
-        #     processed_user_question = f"""
-        #         Learn from the context: {context}
-        #         Answer the following question as if you are the AI assistant: {user_input}
-        #         Produce a text answer that are complete sentences.
-        #     """
-        #     if model_name == "ChatGPT":
-        #         output = call_chatgpt(processed_user_question)
-        #     elif model_name == "Palm":
-        #         output = call_palm(processed_user_question)
-        #     else:
-        #         output = call_chatgpt(processed_user_question)
         elif domain_name == "Upload Your Own":
             processed_user_question = f"""
                 Learn from the context: {pdf_content}
