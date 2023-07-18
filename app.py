@@ -44,11 +44,11 @@ if "domain_name" not in st.session_state:
 
 # Sidebar - let user choose model, show total cost of current conversation, and let user clear the current conversation
 st.sidebar.title("Sidebar")
-similarity_indicator = st.sidebar.radio(
+similarity_indicator = st.sidebar.selectbox(
     "Choose a similarity algorithm:",
     ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "STS-Palm", "Next..."),
 )
-model_name = st.sidebar.radio(
+model_name = st.sidebar.selectbox(
     "Choose a model:",
     (
         "ChatGPT", "GPT4", "Yin", "Palm", "Next..."
