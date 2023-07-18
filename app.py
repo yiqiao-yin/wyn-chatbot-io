@@ -83,6 +83,10 @@ st.sidebar.markdown(
     "@ [Yiqiao Yin](https://www.y-yin.io/) | [LinkedIn](https://www.linkedin.com/in/yiqiaoyin/) | [YouTube](https://youtube.com/YiqiaoYin/)"
 )
 
+with st.sidebar:
+    with st.expander("Instruction Manual 📖"):
+        st.write("Instruction.")
+
 # reset everything
 if clear_button:
     st.session_state["generated"] = []
