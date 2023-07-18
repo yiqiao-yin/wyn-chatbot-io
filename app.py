@@ -85,7 +85,45 @@ st.sidebar.markdown(
 
 with st.sidebar:
     with st.expander("Instruction Manual 📖"):
-        st.write("Instruction.")
+        st.markdown(
+            """
+            ## WYN Chatbot
+
+            Welcome to WYN Chatbot! 😄🤖
+
+            ### Buttons
+
+            1. **Similarity Algorithm** ✨
+
+            Choose a similarity algorithm for text comparisons.
+
+            - **Cosine Similarity** 🔄: Simple embedding based on word frequency count.
+            - **OpenAI Embedding** 🌐: Utilizes OpenAI's embedding layer for semantic textual similarity.
+            - **Palm Embedding** 🌴: Uses Palm's embedding layer for enhanced similarity calculations.
+            - *And many more...*
+
+            2. **Models** 🧠
+
+            Select the chatbot model to power the conversation.
+
+            - **ChatGPT 3** 🤖: Powerful language model for natural language understanding and generation.
+            - **ChatGPT 4** 🤖🤖: Advanced version of ChatGPT 3 with improved capabilities.
+            - **Palm** 🌴: Customized chatbot model using Palm's framework.
+            - **Yin API** 🌐: Make API calls to Yiqiao Yin's custom "Yin" model via AWS API Gateway.
+            - *And more model options available!*
+
+            3. **Domains** 🌍
+
+            Select a specific domain or topic for the chatbot to specialize in.
+
+            - **Coder Domain** 💻: Request coding assistance or code generation.
+            - **CBT Domain** 🧠💬: Experience Cognitive Behavioral Therapy with the chatbot acting as a therapist.
+            - **PDF Scraping Domain** 📚🔍: Extract information from PDFs, such as financial reports or generative AI consulting reports.
+            - *Various other domains available based on your preferences!*
+
+            Please select your desired option by clicking on the corresponding button. Let's start chatting! 🎉
+            """
+        )
 
 # reset everything
 if clear_button:
