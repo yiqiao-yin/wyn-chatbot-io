@@ -93,7 +93,7 @@ similarity_indicator = st.sidebar.selectbox(
     ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "STS-Palm", "Next..."),
 )
 model_name = st.sidebar.selectbox(
-    "Choose a model:", ("ChatGPT", "GPT4", "Yin", "Palm", "Next...")
+    "Choose a model:", ("GPT 3.5", "GPT4", "Yin", "Palm", "Next...")
 )
 domain_name = st.sidebar.selectbox(
     "Choose a domain:",
@@ -536,7 +536,7 @@ with container:
                 You are an AI assistant for the user.
                 Answer the following question from the user: {user_input}
             """
-            if model_name == "ChatGPT":
+            if model_name == "GPT 3.5":
                 output = call_chatgpt(processed_user_question)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
@@ -551,7 +551,7 @@ with container:
                 You are an AI assistant for the user.
                 Answer the following question from the user: {user_input}
             """
-            if model_name == "ChatGPT":
+            if model_name == "GPT 3.5":
                 output = call_chatgpt(processed_user_question)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
@@ -579,7 +579,7 @@ with container:
                 Answer the following question as if you are the AI assistant: {user_input}
                 Produce a text answer that are complete sentences.
             """
-            if model_name == "ChatGPT":
+            if model_name == "GPT 3.5":
                 output = call_chatgpt(processed_user_question)
             elif model_name == "GPT4":
                 output = call_chatcompletion(messages=qa_pairs)
@@ -594,7 +594,7 @@ with container:
                 Make sure to be aware of suicidal symptoms, depression, anxiety disorders.
                 Be patient with the user and try to comfort them.
             """
-            if model_name == "ChatGPT":
+            if model_name == "GPT 3.5":
                 output = call_chatgpt(processed_user_question)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
@@ -606,7 +606,7 @@ with container:
                 Answer the following question as if you are the AI assistant: {user_input}
                 Produce a text answer that are complete sentences.
             """
-            if model_name == "ChatGPT":
+            if model_name == "GPT 3.5":
                 output = call_chatgpt(processed_user_question)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
