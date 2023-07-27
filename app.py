@@ -96,7 +96,7 @@ similarity_indicator = st.sidebar.selectbox(
     ("Cosine", "Levenshtein", "STS", "STS-OpenAI", "STS-Palm", "Next..."),
 )
 model_name = st.sidebar.selectbox(
-    "Choose a model:", ("GPT 3.5", "GPT4", "Yin", "Palm", "Next...")
+    "Choose a model:", ("GPT 3.5", "GPT 4", "Yin", "Palm", "Next...")
 )
 domain_name = st.sidebar.selectbox(
     "Choose a domain:",
@@ -240,7 +240,7 @@ with container:
             """
             if model_name == "GPT 3.5":
                 output = call_chatgpt(processed_user_question)
-            elif model_name == "GPT4":
+            elif model_name == "GPT 4":
                 output = call_chatcompletion(messages=qa_pairs)
             elif model_name == "Palm":
                 output = call_palm(processed_user_question)
@@ -281,7 +281,7 @@ if st.session_state["generated"]:
         for i in range(len(st.session_state["generated"])):
             message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
             answer = st.session_state["generated"][i]["data"]
-            unit_price = 0.03 if model_name == "GPT4" else 0.002
+            unit_price = 0.03 if model_name == "GPT 4" else 0.002
             if domain_name.lower() != "coder":
                 message(
                     f"""
