@@ -37,13 +37,10 @@ if "generated" not in st.session_state:
     st.session_state["generated"] = []
 if "past" not in st.session_state:
     st.session_state["past"] = []
-# Check if "messages" is not stored in session state and set it to an empty list
 if "messages" not in st.session_state:
-    st.session_state.messages = []
-# Iterate over each message in the session state messages
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+    st.session_state["messages"] = [
+        {"role": "system", "content": "You are a helpful assistant."}
+    ]
 if "domain_name" not in st.session_state:
     st.session_state["domain_name"] = []
 
@@ -137,11 +134,9 @@ st.sidebar.markdown(
 if clear_button:
     st.session_state["generated"] = []
     st.session_state["past"] = []
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+    st.session_state["messages"] = [
+        {"role": "system", "content": "You are a helpful assistant."}
+    ]
     st.session_state["number_tokens"] = []
     st.session_state["domain_name"] = []
     counter_placeholder.write(f"Next item ...")
@@ -181,98 +176,123 @@ response_container = st.container()
 container = st.container()
 
 
-# Get user input from chat_input and store it in the prompt variable using the walrus operator ":="
-if prompt := st.chat_input("What is up?"):
-    # Add user message to session state messages
-    st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
-        st.markdown(prompt)
+with container:
+    with st.form(key="my_form", clear_on_submit=True):
+        user_input = st.text_area("Enter your question here:", key="input", height=100)
+        if model_name == "Yin":
+            user_key = st.text_input(
+                "Model Yin API Key", type="password", key="input_user_key"
+            )
+            st.warning(
+                "Model Yin is a general chatbot currently and does not feed into other domains.",
+                icon="⚠️",
+            )
+        submit_button = st.form_submit_button(label="Send")
 
-    if domain_name == "General":
-        processed_user_question = f"""
-            You are an AI assistant for the user.
-            Answer the following question from the user: {user_input}
-        """
-        if model_name == "GPT 3.5":
-            output = call_chatgpt(processed_user_question)
-        elif model_name == "Palm":
-            output = call_palm(processed_user_question)
-        elif model_name == "Yin":
-            query = processed_user_question
-            api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
-            output = call_yin_test1(api_url)["answer"]
-        else:
-            output = call_chatgpt(processed_user_question)
-    elif domain_name == "Coder":
-        processed_user_question = f"""
-            You are an AI assistant for the user.
-            Answer the following question from the user: {user_input}
-        """
-        if model_name == "GPT 3.5":
-            output = call_chatgpt(processed_user_question)
-        elif model_name == "Palm":
-            output = call_palm(processed_user_question)
-        elif model_name == "Yin":
-            query = processed_user_question
-            api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
-            output = call_yin_test1(api_url)["answer"]
-        else:
-            output = call_chatgpt(processed_user_question)
-    elif domain_name in [
-        "Labcorp 2022 Annual Report",
-        "Mckinsey Generative AI Report",
-        "Adopting AI Responsibly",
-    ]:
-        df_screened_by_dist_score = add_dist_score_column(
-            df, user_input, similarity_indicator.lower().replace("-", "")
-        )
-        qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
-        qa_pairs_single = convert_to_list_of_dict_single_pair(
-            df_screened_by_dist_score
-        )
+    if submit_button and user_input:
+        if domain_name == "General":
+            processed_user_question = f"""
+                You are an AI assistant for the user.
+                Answer the following question from the user: {user_input}
+            """
+            if model_name == "GPT 3.5":
+                output = call_chatgpt(processed_user_question)
+            elif model_name == "Palm":
+                output = call_palm(processed_user_question)
+            elif model_name == "Yin":
+                query = processed_user_question
+                api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
+                output = call_yin_test1(api_url)["answer"]
+            else:
+                output = call_chatgpt(processed_user_question)
+        elif domain_name == "Coder":
+            processed_user_question = f"""
+                You are an AI assistant for the user.
+                Answer the following question from the user: {user_input}
+            """
+            if model_name == "GPT 3.5":
+                output = call_chatgpt(processed_user_question)
+            elif model_name == "Palm":
+                output = call_palm(processed_user_question)
+            elif model_name == "Yin":
+                query = processed_user_question
+                api_url = f"https://y3q3szoxua.execute-api.us-east-1.amazonaws.com/dev/my-openai-api-test1?query={query}&key={user_key}"
+                output = call_yin_test1(api_url)["answer"]
+            else:
+                output = call_chatgpt(processed_user_question)
+        elif domain_name in [
+            "Labcorp 2022 Annual Report",
+            "Mckinsey Generative AI Report",
+            "Adopting AI Responsibly",
+        ]:
+            df_screened_by_dist_score = add_dist_score_column(
+                df, user_input, similarity_indicator.lower().replace("-", "")
+            )
+            qa_pairs = convert_to_list_of_dict(df_screened_by_dist_score)
+            qa_pairs_single = convert_to_list_of_dict_single_pair(
+                df_screened_by_dist_score
+            )
 
-        processed_user_question = f"""
-            Learn from the context: {qa_pairs}
-            Answer the following question as if you are the AI assistant: {user_input}
-            Produce a text answer that are complete sentences.
-        """
-        if model_name == "GPT 3.5":
-            output = call_chatgpt(processed_user_question)
-        elif model_name == "GPT 4":
-            output = call_chatcompletion(messages=qa_pairs)
-        elif model_name == "Palm":
-            output = call_palm(processed_user_question)
-        else:
-            output = call_chatgpt(processed_user_question)
-    elif domain_name == "CBT":
-        processed_user_question = f"""
-            You are therapist for the user. You specialize in Cognitive Behavioral Therapy.
-            Answer the following question from the user: {user_input}
-            Make sure to be aware of suicidal symptoms, depression, anxiety disorders.
-            Be patient with the user and try to comfort them.
-        """
-        if model_name == "GPT 3.5":
-            output = call_chatgpt(processed_user_question)
-        elif model_name == "Palm":
-            output = call_palm(processed_user_question)
-        else:
-            output = call_chatgpt(processed_user_question)
-    elif domain_name == "Upload Your Own":
-        processed_user_question = f"""
-            Learn from the context: {pdf_content}
-            Answer the following question as if you are the AI assistant: {user_input}
-            Produce a text answer that are complete sentences.
-        """
-        if model_name == "GPT 3.5":
-            output = call_chatgpt(processed_user_question)
-        elif model_name == "Palm":
-            output = call_palm(processed_user_question)
-        else:
-            output = call_chatgpt(processed_user_question)
+            processed_user_question = f"""
+                Learn from the context: {qa_pairs}
+                Answer the following question as if you are the AI assistant: {user_input}
+                Produce a text answer that are complete sentences.
+            """
+            if model_name == "GPT 3.5":
+                output = call_chatgpt(processed_user_question)
+            elif model_name == "GPT 4":
+                output = call_chatcompletion(messages=qa_pairs)
+            elif model_name == "Palm":
+                output = call_palm(processed_user_question)
+            else:
+                output = call_chatgpt(processed_user_question)
+        elif domain_name == "CBT":
+            processed_user_question = f"""
+                You are therapist for the user. You specialize in Cognitive Behavioral Therapy.
+                Answer the following question from the user: {user_input}
+                Make sure to be aware of suicidal symptoms, depression, anxiety disorders.
+                Be patient with the user and try to comfort them.
+            """
+            if model_name == "GPT 3.5":
+                output = call_chatgpt(processed_user_question)
+            elif model_name == "Palm":
+                output = call_palm(processed_user_question)
+            else:
+                output = call_chatgpt(processed_user_question)
+        elif domain_name == "Upload Your Own":
+            processed_user_question = f"""
+                Learn from the context: {pdf_content}
+                Answer the following question as if you are the AI assistant: {user_input}
+                Produce a text answer that are complete sentences.
+            """
+            if model_name == "GPT 3.5":
+                output = call_chatgpt(processed_user_question)
+            elif model_name == "Palm":
+                output = call_palm(processed_user_question)
+            else:
+                output = call_chatgpt(processed_user_question)
 
-    # Display assistant response in chat message container
-    with st.chat_message("assistant"):
-        st.markdown(output)
+        # update session
+        st.session_state["past"].append(user_input)
+        st.session_state["generated"].append({"type": "normal", "data": f"{output}"})
 
-    # Add assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": output})
+if st.session_state["generated"]:
+    with response_container:
+        for i in range(len(st.session_state["generated"])):
+            message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
+            answer = st.session_state["generated"][i]["data"]
+            unit_price = 0.03 if model_name == "GPT 4" else 0.002
+            if domain_name.lower() != "coder":
+                message(
+                    f"""
+                        {answer} \n 
+                        👆 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*unit_price/1000}
+                    """
+                )
+            else:
+                message(
+                    f"👇 Token size: {token_size(answer)}, estimated cost: ${token_size(answer)*unit_price/1000}",
+                    key=f"{i}",
+                )
+                st.code(answer)
+            counter_placeholder.write(f"All rights reserved @ Yiqiao Yin")
