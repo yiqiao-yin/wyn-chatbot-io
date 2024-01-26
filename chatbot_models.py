@@ -15,6 +15,9 @@ from PyPDF2 import PdfReader
 from scipy.spatial.distance import cosine
 from sentence_transformers import SentenceTransformer
 from streamlit_chat import message
+import openai
+from openai import OpenAI
+from typing import List, Dict, Any
 
 
 # palm_api_key = os.environ['PALM_API_KEY']
@@ -22,34 +25,39 @@ palm_api_key = st.secrets["PALM_API_KEY"]
 palm.configure(api_key=palm_api_key)
 
 
-def call_chatgpt(prompt: str) -> str:
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai_client = OpenAI()
+
+
+def call_chatgpt(query: str, model: str = "gpt-3.5-turbo") -> str:
     """
-    Uses the OpenAI API to generate an AI response to a prompt.
+    Generates a response to a query using the specified language model.
 
     Args:
-        prompt: A string representing the prompt to send to the OpenAI API.
+        query (str): The user's query that needs to be processed.
+        model (str, optional): The language model to be used. Defaults to "gpt-3.5-turbo".
 
     Returns:
-        A string representing the AI's generated response.
-
+        str: The generated response to the query.
     """
 
-    # Use the OpenAI API to generate a response based on the input prompt.
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        temperature=0.3,
-        max_tokens=800,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0,
+    # Prepare the conversation context with system and user messages.
+    messages: List[Dict[str, str]] = [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": f"Question: {query}."},
+    ]
+
+    # Use the OpenAI client to generate a response based on the model and the conversation context.
+    response: Any = openai_client.chat.completions.create(
+        model=model,
+        messages=messages,
     )
 
-    # Extract the text from the first (and only) choice in the response output.
-    ans = response.choices[0]["text"]
+    # Extract the content of the response from the first choice.
+    content: str = response.choices[0].message.content
 
-    # Return the generated AI response.
-    return ans
+    # Return the generated content.
+    return content
 
 
 def call_chatcompletion(
