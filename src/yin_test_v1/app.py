@@ -129,54 +129,31 @@ def run_algotrader() -> Dict[str, Any]:
     Dict[str, Any]: A dictionary representing the latest row of the calculated returns data.
     """
     # A hardcoded list of ticker symbols to be used in the algorithmic trading strategy
-    tickers = [
+    tickers_list = [
         "AXP",
-        "AMGN",
         "AAPL",
         "BA",
-        "CAT",
         "CSCO",
-        "CVX",
         "GS",
-        "HD",
-        "HON",
         "IBM",
         "INTC",
-        "JNJ",
-        "KO",
         "JPM",
         "MCD",
-        "MMM",
         "MRK",
         "MSFT",
-        "NKE",
         "PG",
-        "TRV",
         "UNH",
-        "CRM",
-        "VZ",
         "V",
-        "WBA",
-        "WMT",
         "DIS",
-        "DOW",
-        "XOM",
-        "WFC",
         "MA",
         "COST",
         "AVGO",
         "ADBE",
-        "C",
         "NFLX",
         "PYPL",
         "TSLA",
         "NVDA",
     ]
-
-    # There's a bug here: 'tickers' is already a list, so calling 'split' is incorrect
-    tickers_list = [
-        ticker.strip() for ticker in tickers.split(",")
-    ]  # This line should be `tickers_list = tickers`
 
     # Define the time range for the stock data: from the start of 2020 to the current date
     start_date = "2020-01-01"
@@ -185,18 +162,20 @@ def run_algotrader() -> Dict[str, Any]:
     # Download the stock data for the specified tickers and time range with monthly frequency
     stock_data = download_stock_data(
         tickers_list,
-        start_date.strftime(
-            "%Y-%m-%d"
-        ),  # Redundant strftime, since start_date is already a string
-        end_date.strftime("%Y-%m-%d"),
+        start_date,
+        end_date,
         w="1mo",
     )
 
     # Create a portfolio from the downloaded stock data and calculate returns using a certain logic (not shown)
     returns_data = create_portfolio_and_calculate_returns(stock_data, 5)
 
+    # Convert the last row to a string
+    last_row = returns_data.iloc[-1]
+    last_row_string = last_row.to_string()
+
     # Return the most recent entry of the return data
-    return {"prediction": returns_data.tail(1)}
+    return last_row_string
 
 
 def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
@@ -227,15 +206,18 @@ def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
 
     # Validate the provided user key and obtain the response based on the validity of the key
     if user_key == "123":
-        answer = call_chatgpt(question)
+        prediction_ = run_algotrader()
+        prompt = f"""
+        Data given: {prediction_};
+
+        Describe the data given above and answer the following question: {question}
+        """
+        answer = call_chatgpt(prompt)
     else:
         answer = "Please enter the correct key!"
 
-    # Run algotrader
-    prediction_ = run_algotrader()
-
     # Construct the response data including both the question and its corresponding answer
-    processed_resp = {"question": question, "answer": answer, "prediction": prediction_}
+    processed_resp = {"question": prompt, "answer": answer}
 
     # Create HTTP response object with status code, headers, and the JSON payload as body
     http_resp = {
