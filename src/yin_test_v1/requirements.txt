@@ -1,2 +1,3 @@
-openai==0.27.7
-yfinance==0.2.37
+openai
+yfinance
+pandas
